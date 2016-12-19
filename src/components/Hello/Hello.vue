@@ -1,7 +1,6 @@
-<template src='./ola.html'></template>
+<template src='./Hello.html'></template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped src='./ola.css'></style>
+<style scoped src='./Hello.css'></style>
 
 <script>
 export default {
