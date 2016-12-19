@@ -3,6 +3,11 @@ logs
 *.log
 npm-debug.log*
 
+# Editor's files
+*.sublime-*
+.idea
+.project
+
 # Runtime data
 pids
 *.pid
