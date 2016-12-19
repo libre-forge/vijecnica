@@ -1,0 +1,30 @@
+# Project Directories
+dist
+
+# Editor's files
+*.sublime-*
+.idea
+.project
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Generic Files
+.DS_Store
+pids
+*.out
+*.pid
+*.seed
+*.swp
+*.swo
