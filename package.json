@@ -22,7 +22,7 @@
     },
     {
       "name" : "Mario García",
-      "email" : "@kaleidos.net"
+      "email" : "mario.garcia@kaleidos.net"
     },
     {
       "name" : "Omar Moreno",
@@ -34,7 +34,7 @@
     "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
   },
   "bugs": {
-    "url": "https://github.com/libre-forge/vijecnica/issues"
+    "url": "https://tree.taiga.io/project/xaviju-libreforge/issues"
   },
   "homepage": "https://github.com/libre-forge/vijecnica#readme",
   "engines": {
