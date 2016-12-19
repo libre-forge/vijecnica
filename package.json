@@ -3,14 +3,32 @@
   "version": "0.0.1",
   "description": "Libreforge project",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/libre-forge/vijecnica.git"
   },
-  "author": "",
+  "author": [
+    {
+      "name" : "José Manuel Rosa",
+      "email" : "josemanuel.rosa@kaleidos.net"
+    },
+    {
+      "name" : "Xavier Julian",
+      "email" : "xavier.julian@kaleidos.net"
+    },
+    {
+      "name" : "David Barragan",
+      "email" : "david.barragan@kaleidos.net"
+    },
+    {
+      "name" : "Mario García",
+      "email" : "@kaleidos.net"
+    },
+    {
+      "name" : "Omar Moreno",
+      "email" : "omar@rojo2.com"
+    }
+  ],
   "license": {
     "type": "Apache-2.0",
     "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -19,5 +37,10 @@
     "url": "https://github.com/libre-forge/vijecnica/issues"
   },
   "homepage": "https://github.com/libre-forge/vijecnica#readme",
-  "dependencies": {}
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }
