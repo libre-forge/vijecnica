@@ -2,6 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var styleLintPlugin = require('stylelint-webpack-plugin')
 
 var env = process.env.NODE_ENV
 // check env & config/index.js to decide whether to enable CSS source maps for the
@@ -90,5 +91,13 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
-  }
+  },
+  plugins: [
+    new styleLintPlugin({
+      context: 'src',
+      files: '**/*.css',
+      failOnError: false,
+      quiet: false,
+    })
+  ]
 }
