@@ -1,7 +1,7 @@
 {
   "name": "libreforge",
   "version": "0.0.1",
-  "description": "Libreforge project",
+  "description": "Vijecnica is the libreforge frontend - and the Sarajevo's City Hall",
   "license": {
     "type": "Apache-2.0",
     "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
