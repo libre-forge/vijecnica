@@ -1,13 +1,10 @@
-
-
-
 <template src='./courses-list.html'></template>
-
-
 
 <style scoped src='./courses-list.css'></style>
 
 <script>
+import courseCard from '../course-card/course-card'
+
 export default {
     name: 'courses-list',
     data: function () {
@@ -38,6 +35,9 @@ export default {
             type: String,
             required: true
         }
+    },
+    components: {
+        courseCard
     },
     watch: {
         subject: function (val) {

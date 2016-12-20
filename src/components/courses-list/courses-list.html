@@ -1,6 +1,3 @@
 <div v-if="courses" class="courses-list">
-    <li v-for="course in courses">
-        <p>{{ course.name }}</p>
-        <p>{{ course.description }}</p>
-    </li>
+    <course-card v-for="course in courses" v-bind:course="course"></course-card>
 </div>
