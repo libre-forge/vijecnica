@@ -1,0 +1,13 @@
+<div class="input-subjects">
+    <input type="text" :id="id" :name="name"
+           v-model="newSubject"
+           @keydown.enter.stop.prevent="addSubject"
+           placeholder="Add a new subject">
+    <button type="button" @click.prevent="addSubject">+ Add</button>
+    <ul>
+        <li v-for="(subject, index) in value">
+            {{ subject }}
+            <button type="button" @click="removeSubject(index)">X</button>
+        </li>
+    </ul>
+</div>
