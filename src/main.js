@@ -4,7 +4,7 @@ import Vue from 'vue'
 import { VueRouter, router } from './router'
 import App from './App'
 
-Vue.use(VueRouter)
+import './styles.js'
 
 /* eslint-disable no-new */
 new Vue({
