@@ -1,8 +1,17 @@
-<div class="searchbox" :class="{active : displayCourses}">
-    <img v-if="!displayCourses" src="../../assets/logo.gif" alt="LibreForge">
-    <form class="searchbox-form">
-        <label for="searchbox">{{ label }}</label>
-        <input type="text" id="searchbox" v-model="courseName" placeholder="GraphSQL">
-        <button @click.prevent="getCourses(courseName)" type="button" name="search-button">Search</button>
-    </form>
+<div class="Searchbox" :class="{active : displayCourses}">
+    <div class="Searchbox__content">
+        <img class="Searchbox__logo" v-if="!displayCourses" src="../../assets/logo.gif" alt="LibreForge">
+        <form class="Searchbox__form">
+            <label class="Searchbox__label" for="searchbox">{{ label }}</label>
+            <fieldset class="Searchbox__searchField">
+                <input class="Searchbox__input" type="text" id="searchbox" v-model="courseName" placeholder="GraphSQL">
+                <button class="Searchbox__submit" @click.prevent="getCourses(courseName)" type="button" name="search-button">
+                    <svg class="Searchbox__icon" width="24" height="24" viewBox="0 0 32 32">
+                        <circle cx="12" cy="12" r="10" stroke-width="3"/>
+                        <line x1="18" y1="18" x2="31" y2="31" stroke-width="4"/>
+                    </svg>
+                </button>
+            </fieldset>
+        </form>
+    </div>
 </div>
