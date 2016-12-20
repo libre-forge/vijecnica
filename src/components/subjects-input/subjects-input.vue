@@ -25,9 +25,11 @@ export default {
     },
     methods: {
         addSubject: function () {
-            var subjects = this.value.slice()
-            subjects.push(this.newSubject)
-            this.$emit('input', subjects)
+            if (this.newSubject.trim() !== '') {
+                var subjects = this.value.slice()
+                subjects.push(this.newSubject.trim())
+                this.$emit('input', subjects)
+            }
             this.newSubject = ''
         },
         removeSubject: function (index) {
