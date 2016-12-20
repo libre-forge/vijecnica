@@ -1,3 +1,6 @@
-<div class="courses-list">
-    <li>{{ subject }}</li>
+<div v-if="courses" class="courses-list">
+    <li v-for="course in courses">
+        <p>{{ course.name }}</p>
+        <p>{{ course.description }}</p>
+    </li>
 </div>
