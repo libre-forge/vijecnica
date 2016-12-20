@@ -1,11 +1,8 @@
 .course-card {
-    align-items: center;
-    background: linear-gradient(to bottom right, #fb83fa 0%, #b441fc 37%, #3d86ed 100%);
-    display: flex;
-    color: white;
-    flex-direction: column;
-    font-family: sans-serif;
-    justify-content: center;
-    min-height: 100vh;
-    transition: all 0.3s ease-in;
+    background: white;
+    border: 1px solid #e2e2e2;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    height: 200px;
 }
