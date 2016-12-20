@@ -6,8 +6,15 @@
 <script>
 export default {
     name: 'courses-list',
-    data () {
-        return {
+    props: {
+        subject: {
+            type: String,
+            required: true
+        }
+    },
+    watch: {
+        subject: function (val) {
+            console.log(val) // API CALL
         }
     }
 }

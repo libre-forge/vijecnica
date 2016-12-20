@@ -10,13 +10,17 @@ export default {
         return {
             label: 'What do you want to learn?',
             displayCourses: false,
-            courseName: ''
+            courseName: '',
+            subject: ''
         }
     },
     methods: {
-        findCourses: function (course) {
-            this.displayCourses = true
-            console.log(course) // API CAll
+        getCourses: function (subject) {
+            if (subject) {
+                this.displayCourses = true
+                this.$emit('getcourses', subject)
+            }
+            return
         }
     }
 }

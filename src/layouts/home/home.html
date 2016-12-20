@@ -1,4 +1,4 @@
 <div id="home">
-    <searchbox></searchbox>
-    <courses-list><courses-list>
+    <searchbox v-on:getcourses="getCourses"></searchbox>
+    <courses-list v-bind:subject="subject"></courses-list>
 </div>
