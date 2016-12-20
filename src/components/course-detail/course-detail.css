@@ -1,0 +1,31 @@
+.course-detail {
+    background: white;
+}
+
+.course-members {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.course-members li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+    border: 3px solid transparent;
+}
+
+.course-members-owner {
+    border: 3px solid rgb(112, 254, 1);
+}
+
+.course-members-avatar {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.course-members-email {
+    font-size: 0.5rem;
+}
