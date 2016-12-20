@@ -7,9 +7,9 @@ import course from './layouts/course/course'
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: home, isDefault: true },
-        { path: '/test', component: miComponent },
-        { path: '/course/add', component: AddCourse },
+        { path: '/', name: 'home', component: home, isDefault: true },
+        { path: '/test', name: 'test', component: miComponent },
+        { path: '/course/add', name: 'add-course', component: AddCourse },
         { path: '/course/:id', name: 'course', component: course }
     ]
 })
