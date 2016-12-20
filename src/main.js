@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import { VueRouter, router } from './router'
 import App from './App'
+import './styles.js'
 
 Vue.use(VueRouter)
 
