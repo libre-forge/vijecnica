@@ -2,6 +2,10 @@
   <div id="app">
     <img src="./assets/logo.png">
     <hello></hello>
+    <!-- Enlace para acceder a una ruta nueva, que este registrada en Vue -->
+    <router-link to="/test">Go to Test</router-link>
+    <!-- // Lugar donde se renderizaran las vistas de los routers -->
+    <router-view></router-view>
   </div>
 </template>
 
