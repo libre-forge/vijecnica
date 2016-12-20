@@ -7,7 +7,6 @@ import './styles.js'
 
 Vue.use(VueRouter)
 
-
 /* eslint-disable no-new */
 new Vue({
     router,
