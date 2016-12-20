@@ -8,7 +8,8 @@ const router = new VueRouter({
     routes: [
         { path: '/', component: home, isDefault: true },
         { path: '/test', component: miComponent },
-        { path: '/course/add', component: AddCourse }
+        { path: '/course/add', component: AddCourse },
+        { path: '/course/:id', name: 'course', component: AddCourse }
     ]
 })
 

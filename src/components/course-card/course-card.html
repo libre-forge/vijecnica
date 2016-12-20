@@ -1,7 +1,11 @@
 <div class="course-card">
-    <p>Name: {{ course.name }}</p>
+    <p>
+        <router-link :to="{ name: 'course', params: { id: course.id }}">{{course.name}}</router-link>
+    </p>
     <p>Description: {{ course.description }}</p>
     <p>Members: {{ course.members }}/{{course.members_limit}}</p>
     <p>status: {{ course.status }}</p>
+    <p>
     <button type="button" name="join">Join!</button>
+</p>
 </div>

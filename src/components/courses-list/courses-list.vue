@@ -10,18 +10,21 @@ export default {
     data: function () {
         return {
             courses: [{
+                id: 1,
                 name: 'GraphSQL',
                 description: 'Learn GrapSQL',
                 members: 5,
                 members_limit: 10,
                 status: 'active'
             }, {
+                id: 2,
                 name: 'Browser Internal',
                 description: 'Use the platform',
                 members: 5,
                 members_limit: 10,
                 status: 'active'
             }, {
+                id: 3,
                 name: 'Cocina con Bertín',
                 description: 'Bertin y Arévalo alegrarán tu cocina',
                 members: 5,

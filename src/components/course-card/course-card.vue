@@ -6,11 +6,6 @@
 <script>
 export default {
     name: 'course-card',
-    data () {
-        return {
-            course: {}
-        }
-    },
     props: {
         course: {
             type: Object,
