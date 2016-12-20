@@ -13,7 +13,7 @@ import Searchbox from './components/searchbox/searchbox'
 
 export default {
     name: 'courses-lists',
-    data: function() {
+    data () {
         return {
             displayCourses: false,
             pitch: 'Do not invest time in learning, burn it.'
@@ -23,7 +23,7 @@ export default {
         Searchbox
     },
     methods: {
-        isSearching: function() {
+        isSearching: function () {
             this.displayCourses = true
         }
     }
