@@ -4,7 +4,7 @@
     <p>status: {{ course.status }}</p>
     <ul class="course-members">
         <li v-for="member in course.members">
-            <img class="course-members-avatar" v-bind:class="{'course-members-owner' : member.isOwner}" v-bind:src="member.avatar" v-bind:alt="member.username">
+            <img class="course-members-avatar" :class="{'course-members-owner' : member.isOwner}" :src="member.avatar" :alt="member.username">
             <p class="course-members-username">{{member.username}}</p>
         </li>
     </ul>
