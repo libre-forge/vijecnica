@@ -1,0 +1,49 @@
+<form class="add-custom-wizard" @submit.prevent="submit">
+    <h1>Add a new course</h1>
+    <fieldset>
+        <label for="title">
+            Title
+        </label>
+        <input type="text" id="title" name="title" required autofocus
+               v-model="newCourse.title"
+               placeholder="Set a good title">
+    </fieldset>
+    <fieldset>
+        <label for="description">
+            Description
+        </label>
+        <textarea id="description" name="description" required
+                  v-model="newCourse.description"
+                  placeholder="Please, be descriptive here">
+    </fieldset>
+    <fieldset>
+        <label for="total-members">
+            Num. members
+        </label>
+        <input type="number" id="total-members" name="total-members" required
+               v-model="newCourse.numMembers">
+    </fieldset>
+    <fieldset>
+        <label for="subjet1">
+            Create the first 5 subjects
+        </label>
+        <input type="text" id="subject1" name="subject-1"
+               v-model="newCourse.subject1"
+               placeholder="First subject...">
+        <input type="text" id="subject2" name="subject-2"
+               v-model="newCourse.subject2"
+               placeholder="Second subject...">
+        <input type="text" id="subject3" name="subject-3"
+               v-model="newCourse.subject3"
+               placeholder="Third subject...">
+        <input type="text" id="subject4" name="subject-4"
+               v-model="newCourse.subject4"
+               placeholder="Fourth subject...">
+        <input type="text" id="subject5" name="subject-5"
+               v-model="newCourse.subject5"
+               placeholder="Fifth subject...">
+    </fieldset>
+    <fieldset>
+        <button type="submit"> Create </button>
+    </fieldset>
+</form>

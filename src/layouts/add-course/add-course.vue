@@ -2,10 +2,12 @@
 <style src="./add-course.css"></style>
 
 <script>
+import AddCourseWizard from '../../components/add-course-wizard/add-course-wizard'
+
 export default {
     name: 'AddCourse',
-    data () {
-        return {}
+    components: {
+        AddCourseWizard
     }
 }
 </script>
