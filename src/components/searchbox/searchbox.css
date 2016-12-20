@@ -1,11 +1,11 @@
 .searchbox {
-  color: white;
+    color: white;
 }
 
 label {
-  display: block;
+    display: block;
 }
 
 h1 {
-  color: currentColor;
+    color: currentColor;
 }
