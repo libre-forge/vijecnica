@@ -5,22 +5,18 @@
 
 <script>
 import Searchbox from '../../components/searchbox/searchbox'
+import coursesList from '../../components/courses-list/courses-list'
 
 export default {
     name: 'home',
     data () {
         return {
-            displayCourses: false,
             pitch: 'Do not invest time in learning, burn it.'
         }
     },
     components: {
-        Searchbox
-    },
-    methods: {
-        isSearching: function () {
-            this.displayCourses = true
-        }
+        Searchbox,
+        coursesList
     }
 }
 </script>
