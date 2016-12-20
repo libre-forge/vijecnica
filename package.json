@@ -28,8 +28,8 @@
       "email": "david.barragan@kaleidos.net"
     },
     {
-      "name" : "Mario García",
-      "email" : "mario.garcia@kaleidos.net"
+      "name": "Mario García",
+      "email": "mario.garcia@kaleidos.net"
     },
     {
       "name": "Omar Moreno",
@@ -72,6 +72,7 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "json-loader": "^0.5.4",
+    "normalize.css": "^5.0.0",
     "opn": "^4.0.2",
     "ora": "^0.3.0",
     "semver": "^5.3.0",
