@@ -1,5 +1,5 @@
-<div class="searchbox">
-    <img src="../../assets/logo.gif" alt="LibreForge">
+<div class="searchbox" v-bind:class="{active : displayCourses}">
+    <img v-if="!displayCourses" src="../../assets/logo.gif" alt="LibreForge">
     <form class="searchbox-form">
         <label for="searchbox">{{ label }}</label>
         <input type="text" id="searchbox" v-model="courseName" placeholder="GraphSQL">
