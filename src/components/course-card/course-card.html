@@ -6,7 +6,7 @@
     <p>Members: {{ course.members }}/{{course.members_limit}}</p>
     <p>status: {{ course.status }}</p>
     <p>
-        <button type="button" name="join">Join!</button>
-        <button type="button" name="fork">fork!</button>
+        <button v-if="course.status = 'active'" type="button" name="join">Join!</button>
+        <button v-if="course.status = 'archived'" type="button" name="fork">fork!</button>
     </p>
 </div>
