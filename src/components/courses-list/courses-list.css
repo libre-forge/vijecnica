@@ -1,5 +1,21 @@
-.courses-list {
-    background: #f2f2f2;
+.Courses {
+    background-color: #f2f2f2;
+    flex: 1 0 100%;
+}
+
+.Courses__list {
     display: flex;
-    min-height: 90vh;
+    width: 92vw;
+    max-width: 1280px;
+    margin: calc(var(--u) * 2) auto;
+    flex-wrap: wrap;
+}
+
+.Course {
+    height: calc(var(--u) * 48);
+    margin: 0.5rem;
+    padding: var(--padding--card);
+    border-radius: var(--border-radius);
+    background-color: white;
+    flex: 0 0 calc(25% - 1rem);
 }
