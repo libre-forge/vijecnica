@@ -2,8 +2,8 @@
     <p>
         <router-link :to="{ name: 'course', params: { id: course.id }}">{{course.title}}</router-link>
     </p>
-    <p>Description: {{ course.description }}</p>
-    <p>Members: {{ course.members }}/{{course.members_limit}}</p>
+    <p>Description: {{ course.pitch }}</p>
+    <p>Members: {{ course.member_count }}/{{course.member_limit}}</p>
     <p>status: {{ course.status }}</p>
     <p>
         <button v-if="course.status = 'active'" type="button" name="join">Join!</button>

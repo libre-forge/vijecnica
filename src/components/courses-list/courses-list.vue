@@ -7,34 +7,52 @@ import courseCard from '../course-card/course-card'
 import gql from 'graphql-tag'
 
 // GraphQL query
+// const courseList = gql`
+//    query CourseList($test: String!) {
+//        courses(title: $test)
+//    }
+// `
+
 const courseList = gql`
     {
         courses {
             title
+            pitch
+            member_limit
+            member_count
+
         }
     }
 `
 
 export default {
     name: 'courses-list',
-    props: {
-        subject: {
-            type: String,
-            required: true
+    data: function () {
+        return {
+            courses: ''
         }
     },
-    apollo: {
-        courses: {
-            query: courseList
+    props: {
+        subject: {
+            type: String
         }
     },
     components: {
         courseCard
     },
     watch: {
-        subject: function (val) {
-            console.log('miCasa')
-            // this.$apollo.queries.courses
+        subject: function (itemToSearch) {
+            this.$apollo.query({
+                query: courseList
+                // variables: {
+                //    courses: {
+                //        test: 'casa'
+                //    }
+                // }
+            })
+            .then(res => {
+                this.courses = res.data.courses
+            })
         }
     }
 }
