@@ -3,6 +3,16 @@
 
 <script>
 import subjectsInput from '../subjects-input/subjects-input'
+import gql from 'graphql-tag'
+import { router } from '../../router'
+
+
+const courseCreate = gql`
+    mutation CreateCourse($course: CreateCourse) {
+        course(course: $course) {id}
+    }
+`
+
 export default {
     name: 'AddCourseWizard',
     data () {
@@ -21,13 +31,21 @@ export default {
     },
     methods: {
         submit: function () {
-            console.log('Title: ', this.newCourse.title)
-            console.log('Pitch: ', this.newCourse.pitch)
-            console.log('Description: ', this.newCourse.description)
-            console.log('Num. Members: ', this.newCourse.numMembers)
-            console.log('Subjects: ', this.newCourse.subjects)
-            // On success:
-            // router.push({ name: 'course', params: { id: course.id } })
+            this.$apollo.mutate({
+                mutation: courseCreate,
+                variables: {
+                    course: {
+                        title: this.newCourse.title,
+                        description: this.newCourse.description
+                    }
+                    // course: this.newCourse
+                }
+            }).then(res => {
+                router.push({ name: 'course', params: { id: res.data.course.id } })
+            }).catch(res => {
+                // eslint-disable-next-line no-undef, no-alert
+                alert('Error creating the course: \n', res)
+            })
         }
     }
 }
