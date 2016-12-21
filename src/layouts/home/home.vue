@@ -1,6 +1,6 @@
 <template src='./home.html'></template>
 
-<!-- <style scoped src='./home.css'></style> -->
+<style scoped src='./home.css'></style>
 
 <script>
 import Searchbox from '../../components/searchbox/searchbox'
@@ -11,7 +11,8 @@ export default {
     data () {
         return {
             pitch: 'Do not invest time in learning, burn it.',
-            subject: ''
+            subject: '',
+            displayResults: false
         }
     },
     components: {
@@ -21,6 +22,7 @@ export default {
     methods: {
         getCourses: function (subject) {
             this.subject = subject
+            this.displayResults = true
         }
     }
 }

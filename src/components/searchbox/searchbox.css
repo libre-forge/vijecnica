@@ -1,25 +1,3 @@
-.Searchbox {
-    display: flex;
-    flex-direction: column;
-    padding: calc(var(--u) * 3);
-    background-color: var(--color--blackboard);
-    background-image: url('https://static.pexels.com/photos/162560/board-blackboard-success-business-162560.jpeg');
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.Searchbox:not(.active) {
-    height: 100vh;
-    transition: height 0.5s var(--easing--cubic);
-}
-
-.Searchbox.active {
-    height: calc(var(--u) * 12);
-    transition: height 0.5s var(--easing--cubic);
-}
-
 .Searchbox__content {
     display: flex;
     flex-direction: column;
@@ -35,43 +13,11 @@
     justify-content: center;
 }
 
-.Searchbox.active .Searchbox__content {
-    width: 100%;
-    transition: width 0.5s var(--easing--cubic);
-}
-
-.Searchbox:not(.active) .Searchbox__content {
-    width: auto;
-    transition: width 0.5s var(--easing--cubic);
-}
-
 .Searchbox__label {
-    position: absolute;
-    bottom: 4rem;
     font-family: Lato;
     padding: calc(var(--u) * 2);
     color: var(--color--negative-primary);
     font-size: var(--font-size--huge);
-}
-
-.Searchbox.active .Searchbox__label {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.Searchbox__logo {
-    position: absolute;
-    margin: calc(var(--u) * 2);
-    font-size: var(--font-size--huge);
-    font-weight: bold;
-}
-
-.Searchbox:not(.active) .Searchbox__logo {
-    bottom: 8rem;
-}
-
-.Searchbox.active .Searchbox__logo {
-    left: 1rem;
 }
 
 .Searchbox__logoLibre {

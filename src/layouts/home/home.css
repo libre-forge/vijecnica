@@ -1,0 +1,22 @@
+.searchbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color--blackboard);
+    background-image: url('https://static.pexels.com/photos/162560/board-blackboard-success-business-162560.jpeg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.searchbox-wrapper.active {
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(var(--u) * 12);
+    transition: height 0.5s var(--easing--cubic);
+}
+
+.searchbox-wrapper.active .logo {
+    width: 10rem;
+}
