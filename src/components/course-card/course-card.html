@@ -1,12 +1,19 @@
-<div class="course-card">
-    <p>
-        <router-link :to="{ name: 'course', params: { id: course.id }}">{{course.title}}</router-link>
-    </p>
-    <p>Description: {{ course.pitch }}</p>
-    <p>Members: {{ course.member_count }}/{{course.member_limit}}</p>
-    <p>status: {{ course.status }}</p>
-    <p>
-        <button v-if="course.status = 'active'" type="button" name="join">Join!</button>
-        <button v-if="course.status = 'archived'" type="button" name="fork">fork!</button>
-    </p>
+<div class="CourseCard">
+    <div class="CourseCard__info">
+        <div class="CourseCard__status">{{ course.status }}</div>
+        <router-link class="CourseCard__title" :to="{ name: 'course', params: { id: course.id }}">{{course.title}}</router-link>
+        <div class="CourseCard__description">{{ course.pitch }}</div>
+        <div class="CourseCard__members">
+            <svg class="CourseCard__membersIcon" width="16" height="16" viewBox="0 0 32 32">
+                <circle cx="16" cy="8" r="8" />
+                <path d="M 3 32L 29 32L 29 24C 29 24 24 18.5 16 18.5C 8 18.5 3 24 3 24L 3 32Z"/>
+            </svg>
+            <span class="CourseCard__membersValue">{{ course.member_count }} / {{course.member_limit}}</span>
+        </div>
+
+    </div>
+    <div class="CourseCard__actions">
+        <button class="CourseCard__join" v-if="course.status = 'active'" type="button" name="join">Join!</button>
+        <button class="CourseCard__fork" v-if="course.status = 'archived'" type="button" name="fork">fork!</button>
+    </div>
 </div>
