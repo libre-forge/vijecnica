@@ -6,7 +6,15 @@
         </label>
         <input type="text" id="title" name="title" required autofocus
                v-model="newCourse.title"
-               placeholder="Set a good title">
+               placeholder="Type a good title">
+    </fieldset>
+    <fieldset>
+        <label for="pitch">
+            Pitch (max 140 chars.)
+        </label>
+        <textarea id="pitch" name="pitch" required maxlength="140"
+                  v-model="newCourse.pitch"
+                  placeholder="A short description">
     </fieldset>
     <fieldset>
         <label for="description">
