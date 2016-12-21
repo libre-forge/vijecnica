@@ -1,7 +1,7 @@
 <div class="Searchbox" :class="{active : displayCourses}">
     <div class="Searchbox__content">
         <form class="Searchbox__form" @submit.prevent="getCourses(courseName)">
-            <label v-if="displayCourses" class="Searchbox__label" for="searchbox">{{ label }}</label>
+            <label v-if="!displayCourses" class="Searchbox__label" for="searchbox">{{ label }}</label>
             <fieldset class="Searchbox__searchField">
                 <input class="Searchbox__input" type="text" id="searchbox" v-model="courseName" placeholder="GraphSQL">
                 <button class="Searchbox__submit" type="submit" name="search-button">
