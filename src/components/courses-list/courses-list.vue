@@ -16,6 +16,7 @@ import gql from 'graphql-tag'
 const courseList = gql`
     {
         courses {
+            id
             title
             pitch
             member_limit
