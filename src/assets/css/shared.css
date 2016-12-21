@@ -1,3 +1,77 @@
+/*
+* Custom variables
+*/
+@font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-BoldItalic.ttf');
+}
+
 :root {
-    --mi-color: #c5c5c5;
+    --u: 0.5rem;
+    --padding--search: calc(var(--u) * 2);
+    --padding--searchbox: 1rem 1.5rem 1rem 1rem;
+    --padding-card: calc(var(--u) * 3);
+    --border-radius: 0.25rem;
+    --color--primary: hsl(0, 0%, 14%);
+    --color--tertiary: hsl(140, 4%, 68%);
+    --color--blackboard: hsl(140, 4%, 14%);
+    --color--negative-primary: hsl(0, 0%, 88%);
+    --font-size--normal: 1rem;
+    --font-size--big: 1.25rem;
+    --font-size--huge: 1.75rem;
+    --font-size--small: 0.875rem;
+    --easing--cubic: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+/*
+* Normalization
+*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body,
+input,
+textarea {
+    color: --color--primary;
+    font-family: OpenSans, sans-serif;
+    font-size: 1rem;
+}
+
+[type="password"],
+[type="search"],
+[type="text"],
+button,
+fieldset,
+input,
+textarea {
+    display: block;
+    resize: none;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+fieldset {
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
 }

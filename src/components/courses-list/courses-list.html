@@ -1,3 +1,6 @@
-<div v-if="courses" class="courses-list">
-    <course-card v-for="course in courses" :course="course"></course-card>
+<div v-if="courses" class="Courses">
+    <div class="Courses__filter"></div>
+    <div class="Courses__list">
+        <course-card class="Course" v-for="course in courses" :course="course"></course-card>
+    </div>
 </div>

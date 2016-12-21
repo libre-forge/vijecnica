@@ -1,24 +1,111 @@
-.searchbox {
-    align-items: center;
-    background: linear-gradient(to bottom right, #fb83fa 0%, #b441fc 37%, #3d86ed 100%);
+.Searchbox {
     display: flex;
-    color: white;
     flex-direction: column;
-    font-family: sans-serif;
+    padding: calc(var(--u) * 3);
+    background-color: var(--color--blackboard);
+    background-image: url('http://www.publicdomainpictures.net/pictures/110000/velka/chalkboard-or-blackboard.jpg');
+    background-size: cover;
     justify-content: center;
+    align-items: center;
+}
+
+.Searchbox:not(.has--results) {
     height: 100vh;
+    transition: height 0.3s var(--easing--search);
+}
+
+.Searchbox.has--results {
+    height: calc(var(--u) * 12);
     transition: height 0.3s ease-in-out;
 }
 
-.searchbox.active {
-    background: linear-gradient(to top left, #fb83fa 0%, #b441fc 37%, #3d86ed 100%);
-    height: 10vh;
+.Searchbox__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-label {
+.Searchbox__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Searchbox.has--results .Searchbox__content {
+    width: 100%;
+    transition: width 0.3s --easing--cubic;
+}
+
+.Searchbox:not(.has--results) .Searchbox__content {
+    width: auto;
+    transition: width 0.3s --easing--cubic;
+}
+
+.Searchbox__label {
+    position: absolute;
+    bottom: 4rem;
+    font-family: Lato;
+    padding: calc(var(--u) * 2);
+    color: var(--color--negative-primary);
+    font-size: var(--font-size--huge);
+}
+
+.Searchbox.has--results .Searchbox__label {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Searchbox__logo {
+    position: absolute;
+    margin: calc(var(--u) * 2);
+    font-size: var(--font-size--huge);
+    font-weight: bold;
+}
+
+.Searchbox:not(.has--results) .Searchbox__logo {
+    bottom: 8rem;
+}
+
+.Searchbox.has--results .Searchbox__logo {
+    left: 1rem;
+}
+
+.Searchbox__logoLibre {
+    color: magenta;
+}
+
+.Searchbox__logoForge {
+    color: green;
+}
+
+.Searchbox__searchField {
+    position: relative;
+    width: 32rem;
+}
+
+.Searchbox__input {
+    font-size: var(--font-size--big);
     display: block;
+    width: 100%;
+    padding: var(--padding--searchbox);
+    border-radius: var(--border-radius);
 }
 
-h1 {
-    color: currentColor;
+.Searchbox__submit {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.5rem;
+}
+
+.Searchbox__icon {
+    fill: transparent;
+    stroke: var(--color--tertiary);
 }
