@@ -1,6 +1,6 @@
 <div class="course-card">
     <p>
-        <router-link :to="{ name: 'course', params: { id: course.id }}">{{course.name}}</router-link>
+        <router-link :to="{ name: 'course', params: { id: course.id }}">{{course.title}}</router-link>
     </p>
     <p>Description: {{ course.description }}</p>
     <p>Members: {{ course.members }}/{{course.members_limit}}</p>
