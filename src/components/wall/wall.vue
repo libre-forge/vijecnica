@@ -1,41 +1,47 @@
-<template src='./detail-info.html'></template>
+<template src='./wall.html'></template>
 
-<style scoped src='./detail-info.css'></style>
+<style scoped src='./wall.css'></style>
 
 <script>
 import loading from '../../components/loading/loading'
+import comment from '../../components/wall/comment/comment'
 
 export default {
-    name: 'detail-info',
+    name: 'wall',
     data () {
         return {
             id: this.$route.params.id,
-            loading: false
+            loading: false,
+            comment: ''
         }
     },
     created () {
         this.fetchData()
     },
     components: {
-        loading
+        loading,
+        comment
     },
     props: {
         data: {
             type: Object,
             required: true
         },
-        type: {
-            type: String,
+        comments: {
+            type: Array,
             required: true
         }
     },
+    watch: {
+        '$route': 'fetchData'
+    },
     methods: {
         fetchData () {
-            console.log('API CALL -> get post data based on', this.id)
+            console.log('API CALL -> get post wall based on', this.id)
             this.loading = true
             // On success promise
             setTimeout(() => {
-                console.log('Update course', this.id)
+                console.log('Update wall', this.id)
                 this.loading = false
             }, 3000)
         }

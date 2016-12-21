@@ -4,6 +4,7 @@
 
 <script>
 import detailInfo from '../../components/detail-info/detail-info'
+import wall from '../../components/wall/wall'
 
 export default {
     name: 'course',
@@ -37,13 +38,20 @@ export default {
                 }],
                 members_limit: 10,
                 status: 'active'
-            }
+            },
+            comments: [
+                'The human body was designed by a civil engineer. Who else would run a toxic waste pipeline through a recreational area?',
+                'Look! In the sky. It\'s a bird, it\'s a plane. Or is it a hellicopter? No actually I think it is a bird. Or maybe I\'m just seeing things. Who knows... After 10 shots of Whiskey things start to get a bit strange.',
+                'Sorry, I can\'t hangout. My uncle\'s cousin\'s sister in law\'s best friend\'s insurance agent\'s roommate\'s pet goldfish died. Maybe next time.',
+                'From this day on I shall be known as Bob. For Bob is a good name and I am good. But if you want you can just call me Sally.',
+                'I can drive 10 miles, walk 50 feet. Turn around and before I know it, I\'d be back home. Or would I? I\'m not sure but that\'s just how it is.'
+            ]
         }
     },
     components: {
-        detailInfo
+        detailInfo,
+        wall
         // subjectList,
-        // courseWall
     }
     // methods: {
     //     getCourses: function (subject) {

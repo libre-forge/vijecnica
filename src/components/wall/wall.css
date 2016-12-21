@@ -1,0 +1,32 @@
+.wall {
+    background-image: url('http://www.publicdomainpictures.net/pictures/110000/velka/chalkboard-or-blackboard.jpg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    margin: 0.3rem;
+    position: relative;
+    flex-basis: 25vw;
+    border: 0.3rem solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+.wall-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 75px);
+}
+
+.wall-timeline {
+    padding: 1rem;
+}
+
+.comment-form {
+    display: flex;
+    width: 100%;
+    height: calc(72px - 1rem);
+    background: red;
+}
+
+.comment-input {
+    flex: 1;
+}

@@ -1,0 +1,12 @@
+<div class="wall">
+    <loading v-if="loading"></loading>
+    <div class="wall-wrapper">
+        <div class="wall-timeline">
+            <comment v-for="comment in comments" :comment="comment"></comment>
+        </div>
+    </div>
+    <form class="comment-form" @submit.prevent="sendComment(comment)">
+        <input class="comment-input" type="text" name="comment" v-model="comment" placeholder="Add comment">
+        <button class="comment-submit" type="submit" name="send-comment">Send</button>
+    </form>
+</div>

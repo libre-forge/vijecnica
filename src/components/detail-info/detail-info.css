@@ -1,5 +1,9 @@
 .detail-info {
     background: white;
+    margin: 0.3rem;
+    position: relative;
+    flex: 1;
+    padding: 1rem;
 }
 
 .course-members {
