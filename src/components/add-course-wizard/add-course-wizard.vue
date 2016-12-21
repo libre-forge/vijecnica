@@ -6,7 +6,6 @@ import subjectsInput from '../subjects-input/subjects-input'
 import gql from 'graphql-tag'
 import { router } from '../../router'
 
-
 const courseCreate = gql`
     mutation CreateCourse($course: CreateCourse) {
         course(course: $course) {id}
@@ -50,4 +49,3 @@ export default {
     }
 }
 </script>
-
