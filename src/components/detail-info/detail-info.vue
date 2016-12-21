@@ -23,6 +23,10 @@ export default {
         data: {
             type: Object,
             required: true
+        },
+        type: {
+            type: String,
+            required: true
         }
     },
     watch: {

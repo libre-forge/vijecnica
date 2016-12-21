@@ -3,7 +3,10 @@
     <h1 class="detail-name">{{data.name}}</h1>
     <h2 class="detail-description">{{ data.description }}</h2>
     <p>status: {{ data.status }}</p>
-    <ul class="course-members">
+    <p v-if="type === 'subject'">
+        end date: {{ data.date_end }}
+    </p>
+    <ul class="course-members" v-if="type === 'course'">
         <li>
             <img class="course-members-avatar course-members-owner" :src="data.owner.avatar" :alt="data.owner.username">
             <p class="course-members-username">{{data.owner.username}}</p>
@@ -13,8 +16,8 @@
             <p class="course-members-username">{{member.username}}</p>
         </li>
     </ul>
-    <div class="course-options">
-        <a href="">Start Course</a>
-        <a href="">Close Course</a>
+    <div class="course-options" v-if="type === 'course'">
+        <button type="button" name="start-course" v-if="data.status === 'active'">Start Course</button>
+        <button type="button" name="end-course" v-if="data.status === 'ongoing'">Finish Course</button>
     </div>
 </div>

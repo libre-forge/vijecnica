@@ -9,7 +9,7 @@ export default {
     name: 'course',
     data: function () {
         return {
-            course: {
+            courseData: {
                 id: 1,
                 name: 'GraphSQL',
                 description: 'Learn GraphSQL',
