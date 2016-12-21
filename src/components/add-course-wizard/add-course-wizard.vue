@@ -20,7 +20,7 @@ export default {
                 title: '',
                 pitch: '',
                 description: '',
-                numMembers: 5,
+                member_limit: 5,
                 subjects: []
             }
         }
@@ -32,13 +32,7 @@ export default {
         submit: function () {
             this.$apollo.mutate({
                 mutation: courseCreate,
-                variables: {
-                    course: {
-                        title: this.newCourse.title,
-                        description: this.newCourse.description
-                    }
-                    // course: this.newCourse
-                }
+                variables: { course: this.newCourse }
             }).then(res => {
                 router.push({ name: 'course', params: { id: res.data.course.id } })
             }).catch(res => {
