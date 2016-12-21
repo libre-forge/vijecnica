@@ -1,21 +1,15 @@
 .Courses {
     background-color: #f2f2f2;
-    flex: 1 0 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Courses__list {
     display: flex;
     width: 92vw;
     max-width: 1280px;
-    margin: calc(var(--u) * 2) auto;
+    margin: calc(var(--u) * 2) -1rem;
     flex-wrap: wrap;
-}
-
-.Course {
-    height: calc(var(--u) * 48);
-    margin: 0.5rem;
-    padding: var(--padding--card);
-    border-radius: var(--border-radius);
-    background-color: white;
-    flex: 0 0 calc(25% - 1rem);
 }
