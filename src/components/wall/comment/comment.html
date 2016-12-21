@@ -1,3 +1,6 @@
-<div class="comment">
-    {{ comment }}
+<div class="comment" :class="{'comment-me' : user.id === comment.owner.id}">
+    <img class="comment-avatar" :src="comment.owner.avatar" alt="comment.owner.username">
+    <p class="comment-text">
+        {{ comment.comment }}
+    </p>
 </div>

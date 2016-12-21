@@ -30,6 +30,10 @@ export default {
         comments: {
             type: Array,
             required: true
+        },
+        user: {
+            type: Object,
+            required: false
         }
     },
     watch: {

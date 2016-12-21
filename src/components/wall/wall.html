@@ -2,7 +2,7 @@
     <loading v-if="loading"></loading>
     <div class="wall-wrapper">
         <div class="wall-timeline">
-            <comment v-for="comment in comments" :comment="comment"></comment>
+            <comment v-for="comment in comments" :comment="comment" :user="user"></comment>
         </div>
     </div>
     <form class="comment-form" @submit.prevent="sendComment(comment)">

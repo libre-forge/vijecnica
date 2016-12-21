@@ -1,5 +1,31 @@
 .comment {
     background: white;
     padding: 1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0.5rem;
+}
+
+.comment.comment-me {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.comment.comment-me .comment-avatar {
+    order: 2;
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.comment-avatar {
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 4rem;
+}
+
+.comment-text {
+    margin: 0;
+    font-size: var(--font-size--small);
 }

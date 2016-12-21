@@ -7,8 +7,12 @@ export default {
     name: 'comment',
     props: {
         comment: {
-            type: String,
+            type: Object,
             required: true
+        },
+        user: {
+            type: Object,
+            required: false
         }
     }
 }
