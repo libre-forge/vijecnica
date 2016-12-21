@@ -1,12 +1,12 @@
-<template src='./course-detail.html'></template>
+<template src='./detail-info.html'></template>
 
-<style scoped src='./course-detail.css'></style>
+<style scoped src='./detail-info.css'></style>
 
 <script>
 import loading from '../../components/loading/loading'
 
 export default {
-    name: 'course-detail',
+    name: 'detail-info',
     data () {
         return {
             id: this.$route.params.id,
@@ -20,7 +20,7 @@ export default {
         loading
     },
     props: {
-        course: {
+        data: {
             type: Object,
             required: true
         }

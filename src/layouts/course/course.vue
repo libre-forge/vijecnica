@@ -3,7 +3,7 @@
 <style scoped src='./course.css'></style>
 
 <script>
-import courseDetail from '../../components/course-detail/course-detail'
+import detailInfo from '../../components/detail-info/detail-info'
 
 export default {
     name: 'course',
@@ -12,31 +12,28 @@ export default {
             course: {
                 id: 1,
                 name: 'GraphSQL',
-                description: 'Learn GrapSQL',
-                members: [{
+                description: 'Learn GraphSQL',
+                owner: {
                     id: 1,
                     username: 'Leslie Burton',
                     avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
-                    email: 'leslie.burton45@example.com',
-                    isOwner: false
-                }, {
+                    email: 'leslie.burton45@example.com'
+                },
+                members: [{
                     id: 2,
                     username: 'Lorraine Berry',
                     avatar: 'https://randomuser.me/api/portraits/women/75.jpg',
-                    email: 'lorraine.berry88@example.com',
-                    isOwner: true
+                    email: 'lorraine.berry88@example.com'
                 }, {
                     id: 3,
                     username: 'Mark Moreno',
                     avatar: 'https://randomuser.me/api/portraits/men/58.jpg',
-                    email: 'mark.moreno65@example.com',
-                    isOwner: false
+                    email: 'mark.moreno65@example.com'
                 }, {
                     id: 4,
                     username: 'Jared Henry',
                     avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
-                    email: 'jared.henry58@example.com',
-                    isOwner: false
+                    email: 'jared.henry58@example.com'
                 }],
                 members_limit: 10,
                 status: 'active'
@@ -44,7 +41,7 @@ export default {
         }
     },
     components: {
-        courseDetail
+        detailInfo
         // subjectList,
         // courseWall
     }

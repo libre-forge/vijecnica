@@ -1,0 +1,20 @@
+<div class="detail-info">
+    <loading v-if="loading"></loading>
+    <h1 class="detail-name">{{data.name}}</h1>
+    <h2 class="detail-description">{{ data.description }}</h2>
+    <p>status: {{ data.status }}</p>
+    <ul class="course-members">
+        <li>
+            <img class="course-members-avatar course-members-owner" :src="data.owner.avatar" :alt="data.owner.username">
+            <p class="course-members-username">{{data.owner.username}}</p>
+        </li>
+        <li v-for="member in data.members">
+            <img class="course-members-avatar" :src="member.avatar" :alt="member.username">
+            <p class="course-members-username">{{member.username}}</p>
+        </li>
+    </ul>
+    <div class="course-options">
+        <a href="">Start Course</a>
+        <a href="">Close Course</a>
+    </div>
+</div>

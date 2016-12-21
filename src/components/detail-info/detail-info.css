@@ -1,4 +1,4 @@
-.course-detail {
+.detail-info {
     background: white;
 }
 
@@ -24,8 +24,4 @@
 .course-members-avatar {
     width: 5rem;
     border-radius: 50%;
-}
-
-.course-members-email {
-    font-size: 0.5rem;
 }
