@@ -24,9 +24,20 @@
     overflow: hidden;
     position: relative;
     line-height: var(--line-height--paragraph);
-    max-height: calc(var(--line-height--paragraph) * 4);
+    max-height: calc(var(--line-height--paragraph) * 5);
     color: var(--color--secondary);
     margin-bottom: var(--u3);
+}
+
+.CourseCard__description::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(var(--line-height--paragraph) * 4);
+    height: var(--line-height--paragraph);
+    margin-top: 0.25rem;
+    background-color: hsla(0, 0%, 100%, 0.5);
 }
 
 .CourseCard__info {
