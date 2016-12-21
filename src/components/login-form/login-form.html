@@ -1,0 +1,13 @@
+<form class="Loginbox__form" @submit.prevent="loginAuth()">
+    <fieldset class="Loginbox__username">
+        <label class="Loginbox__label" for="Loginbox">Username</label>
+        <input class="Loginbox__input" type="text" id="Loginbox" v-model="login.username" placeholder="laika">
+    </fieldset>
+    <fieldset class="Loginbox__password">
+        <label class="Loginbox__label" for="Passwordbox">Password</label>
+        <input class="Loginbox__input" type="password" id="Passwordbox" v-model="login.password" placeholder="laika">
+    </fieldset>
+    <button class="Loginbox__submit" type="submit" name="login-button">
+        Login
+    </button>
+</form>
