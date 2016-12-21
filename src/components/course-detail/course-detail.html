@@ -1,4 +1,5 @@
 <div class="course-detail">
+    <loading v-if="loading"></loading>
     <h1 class="course-name">{{course.name}}</h1>
     <h2 class="course-description">{{ course.description }}</h2>
     <p>status: {{ course.status }}</p>

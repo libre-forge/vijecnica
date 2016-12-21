@@ -1,8 +1,4 @@
-
-
 <template src='./course.html'></template>
-
-
 
 <style scoped src='./course.css'></style>
 
