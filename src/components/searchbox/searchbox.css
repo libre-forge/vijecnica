@@ -3,20 +3,21 @@
     flex-direction: column;
     padding: calc(var(--u) * 3);
     background-color: var(--color--blackboard);
-    background-image: url('http://www.publicdomainpictures.net/pictures/110000/velka/chalkboard-or-blackboard.jpg');
+    background-image: url('https://static.pexels.com/photos/162560/board-blackboard-success-business-162560.jpeg');
     background-size: cover;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .Searchbox:not(.active) {
     height: 100vh;
-    transition: height 0.3s var(--easing--search);
+    transition: height 0.5s var(--easing--cubic);
 }
 
 .Searchbox.active {
     height: calc(var(--u) * 12);
-    transition: height 0.3s ease-in-out;
+    transition: height 0.5s var(--easing--cubic);
 }
 
 .Searchbox__content {

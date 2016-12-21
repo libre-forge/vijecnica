@@ -44,6 +44,16 @@
     flex: 1;
 }
 
+.CourseCard__members {
+    display: flex;
+    align-items: baseline;
+}
+
+.CourseCard__membersIcon {
+    fill: var(--color--tertiary);
+    margin-right: var(--u);
+}
+
 .CourseCard__actions {
     flex: 0;
     padding-top: var(--u3);
@@ -54,10 +64,16 @@
     font-size: var(--font-size--tiny);
     text-transform: uppercase;
     padding: var(--u) var(--u2);
-    background-color: var(--color--status-active);
-    transform: translateX(-2rem);
-    box-shadow: var(--box-shadow--card);
+    transform: translateX(-1.75rem);
     margin-bottom: var(--u2);
+}
+
+.CourseCard__status.ongoing {
+    background-color: var(--color--status-active);
+}
+
+.CourseCard__status.ongoing {
+    background-color: var(--color--status-archived);
 }
 
 .CourseCard__fork,

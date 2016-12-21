@@ -1,5 +1,6 @@
 <div id="home">
-    <searchbox @getcourses="getCourses"></searchbox>
-    <router-link :to="{name: 'add-course'}">...or create a new course</router-link>
+    <searchbox @getcourses="getCourses">
+        <router-link :to="{name: 'add-course'}">...or create a new course</router-link>
+    </searchbox>
     <courses-list :subject="subject"></courses-list>
 </div>
