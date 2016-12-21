@@ -1,0 +1,19 @@
+.detail {
+    background: white;
+    margin: 0.3rem;
+    position: relative;
+    flex: 1;
+    padding: 1rem;
+}
+
+.detail-created-by {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.detail-avatar {
+    width: 5rem;
+    border: 3px solid rgb(112, 254, 1);
+    border-radius: 50%;
+}

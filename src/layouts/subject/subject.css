@@ -1,0 +1,7 @@
+.subject {
+    background: var(--color--negative-primary);
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    justify-content: space-between;
+}
