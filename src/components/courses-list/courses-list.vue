@@ -20,7 +20,6 @@ const courseList = gql`
             pitch
             member_limit
             member_count
-
         }
     }
 `
