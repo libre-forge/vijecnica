@@ -4,7 +4,10 @@
     padding: var(--padding--card);
     border-radius: var(--border-radius);
     background-color: white;
-    flex: 0 0 calc(25% - 1rem);
+    flex: 0 0 calc(33% - 1rem);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow--card);
 }
 
 .CourseCard__title {
@@ -14,13 +17,36 @@
     color: var(--color--primary);
     line-height: var(--line-height--title);
     font-weight: bold;
-    margin-bottom: calc(var(--u) * 3);
+    margin-bottom: var(--u3);
 }
 
 .CourseCard__description {
     overflow: hidden;
     position: relative;
     line-height: var(--line-height--paragraph);
-    max-height: calc(var(--line-height--paragraph) * 3);
+    max-height: calc(var(--line-height--paragraph) * 4);
     color: var(--color--secondary);
+    margin-bottom: var(--u3);
+}
+
+.CourseCard__info {
+    flex: 1;
+}
+
+.CourseCard__actions {
+    flex: 0;
+    padding-top: var(--u3);
+}
+
+.CourseCard__fork,
+.CourseCard__join {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--font-size--big);
+    justify-content: center;
+    padding: var(--padding--button);
+    background-color: var(--color--action-primary);
+    border-radius: var(--border-radius);
 }

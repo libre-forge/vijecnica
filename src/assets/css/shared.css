@@ -8,14 +8,18 @@
 
 :root {
     --u: 0.5rem;
+    --u3: calc(var(--u) * 3);
     --padding--search: calc(var(--u) * 2);
     --padding--searchbox: 1rem 1.5rem 1rem 1rem;
-    --padding--card: calc(var(--u) * 3);
+    --padding--card: var(--u3);
+    --padding--button: var(--u) var(--u3);
     --border-radius: 0.25rem;
+    --box-shadow--card: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     --color--primary: hsl(0, 0%, 14%);
     --color--secondary: hsl(140, 4%, 32%);
     --color--tertiary: hsl(140, 4%, 68%);
     --color--blackboard: hsl(140, 4%, 14%);
+    --color--action-primary: hsl(36, 90%, 50%);
     --color--negative-primary: hsl(0, 0%, 88%);
     --font-size--normal: 1rem;
     --font-size--big: 1.25rem;
@@ -38,7 +42,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     line-height: 1.5;
