@@ -8,23 +8,26 @@
 
 :root {
     --u: 0.5rem;
+    --u2: calc(var(--u) * 2);
     --u3: calc(var(--u) * 3);
     --padding--search: calc(var(--u) * 2);
     --padding--searchbox: 1rem 1.5rem 1rem 1rem;
     --padding--card: var(--u3);
-    --padding--button: var(--u) var(--u3);
+    --padding--button: calc(var(--u) * 2) var(--u3);
     --border-radius: 0.25rem;
     --box-shadow--card: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     --color--primary: hsl(0, 0%, 14%);
     --color--secondary: hsl(140, 4%, 32%);
     --color--tertiary: hsl(140, 4%, 68%);
     --color--blackboard: hsl(140, 4%, 14%);
-    --color--action-primary: hsl(36, 90%, 50%);
+    --color--action-primary: hsl(350, 80%, 44%);
     --color--negative-primary: hsl(0, 0%, 88%);
+    --color--status-active: hsl(140, 70%, 44%);
     --font-size--normal: 1rem;
     --font-size--big: 1.25rem;
     --font-size--huge: 1.75rem;
     --font-size--small: 0.875rem;
+    --font-size--tiny: 0.75rem;
     --line-height--title: 1.125;
     --line-height--paragraph: 1.5rem;
     --easing--cubic: cubic-bezier(0.7, 0, 0.3, 1);
@@ -79,7 +82,7 @@ button {
 }
 
 #home {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }

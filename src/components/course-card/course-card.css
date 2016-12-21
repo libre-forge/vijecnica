@@ -1,10 +1,10 @@
 .CourseCard {
-    height: calc(var(--u) * 48);
+    height: calc(var(--u) * 50);
     margin: var(--u);
     padding: var(--padding--card);
     border-radius: var(--border-radius);
     background-color: white;
-    flex: 0 0 calc(33% - 1rem);
+    flex: 0 0 calc(25% - 1rem);
     display: flex;
     flex-direction: column;
     box-shadow: var(--box-shadow--card);
@@ -49,13 +49,24 @@
     padding-top: var(--u3);
 }
 
+.CourseCard__status {
+    display: inline-block;
+    font-size: var(--font-size--tiny);
+    text-transform: uppercase;
+    padding: var(--u) var(--u2);
+    background-color: var(--color--status-active);
+    transform: translateX(-2rem);
+    box-shadow: var(--box-shadow--card);
+    margin-bottom: var(--u2);
+}
+
 .CourseCard__fork,
 .CourseCard__join {
     width: 100%;
     display: flex;
     align-items: center;
-    font-weight: bold;
     font-size: var(--font-size--big);
+    color: white;
     justify-content: center;
     padding: var(--padding--button);
     background-color: var(--color--action-primary);
