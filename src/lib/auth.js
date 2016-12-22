@@ -7,7 +7,6 @@ const user = {
     username: () => storage.get('user', 'username'),
     avatar: () => {
         const email = storage.get('user', 'username')
-        console.log(`http://gravatar.com/avatar/${md5(email)}`)
         return `http://gravatar.com/avatar/${md5(email)}`
     }
 }
