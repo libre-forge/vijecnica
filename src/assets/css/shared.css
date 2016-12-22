@@ -32,7 +32,7 @@
     --font-size--tiny: 0.75rem;
     --line-height--title: 1.125;
     --line-height--paragraph: 1.5rem;
-    --easing--cubic: cubic-bezier(0.7, 0, 0.3, 1);
+    --easing--cubic: cubic-bezier(0.01, 0.77, 0.61, 0.9);
 }
 
 /*

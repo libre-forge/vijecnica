@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color--blackboard);
-    background-image: url('https://static.pexels.com/photos/162560/board-blackboard-success-business-162560.jpeg');
+    background-image: url('../../assets/board-blackboard-success.jpeg');
     background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
     width: 100%;

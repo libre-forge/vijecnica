@@ -1,6 +1,6 @@
 <div id="home">
     <div class="searchbox-wrapper" :class="{'active': displayResults}">
-        <img class="logo" v-if="displayResults" src="../../assets/logo.gif" alt="LibreForge">
+        <img class="logo" src="../../assets/logo.gif" alt="LibreForge">
         <searchbox @getcourses="getCourses"></searchbox>
         <router-link :to="{name: 'add-course'}">...or create a new course</router-link>
     </div>
