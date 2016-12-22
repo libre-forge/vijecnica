@@ -1,6 +1,7 @@
 .subject {
     background: var(--color--negative-primary);
-    min-height: 100vh;
+    min-height: calc(100vh - 53px);
+    height: 100%;
 }
 
 .subject-wrapper {
