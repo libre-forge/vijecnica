@@ -1,14 +1,10 @@
 <div id="home">
     <div class="searchbox-wrapper" :class="{'active': displayResults}">
-<<<<<<< b1a3d373c4e8cf4ad3d8d026812cbad1cc8a4a07
         <img class="logo" src="../../assets/logo.gif" alt="LibreForge">
         <searchbox @getcourses="getCourses"></searchbox>
-        <router-link class="add-course" :to="{name: 'add-course'}">...or create a new course</router-link>
-=======
         <img class="Logo" src="../../assets/logo.gif" alt="LibreForge">
         <searchbox @getcourses="getCourses"></searchbox>
         <router-link class="Button__createCourse" :to="{name: 'add-course'}">...or create a new course</router-link>
->>>>>>> add course form first styles
     </div>
     <courses-list :subject="subject"></courses-list>
 </div>
