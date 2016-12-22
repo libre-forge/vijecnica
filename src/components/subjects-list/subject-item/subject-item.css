@@ -1,3 +1,26 @@
-.subjects-input {
-    display: block;
+.subject-item {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color--primary);
+    font-size: var(--font-size--small);
+    transition: all 0.2s linear;
+    background: white;
+    vertical-align: baseline;
+}
+
+.subject-item:hover {
+    background: #f6f6f6;
+    color: var(--color--action-primary);
+}
+
+.subject-total-resources {
+    color: var(--color--border);
+}
+
+.Resources__icon {
+    fill: currentColor;
+    width: 0.9rem;
+    height: 0.9rem;
 }
