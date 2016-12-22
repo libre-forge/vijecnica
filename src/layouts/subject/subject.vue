@@ -3,6 +3,7 @@
 <style scoped src='./subject.css'></style>
 
 <script>
+import Navigation from '../../components/nav/nav'
 import subjectDetail from '../../components/subject-detail/subject-detail'
 import wall from '../../components/wall/wall'
 import resources from '../../components/resources/resources'
@@ -20,6 +21,7 @@ export default {
         }
     },
     components: {
+        Navigation,
         subjectDetail,
         resources,
         wall

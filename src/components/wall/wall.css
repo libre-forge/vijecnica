@@ -25,6 +25,7 @@
     width: 100%;
     height: calc(72px - 1rem);
     background: red;
+    margin-top: auto;
 }
 
 .comment-input {
