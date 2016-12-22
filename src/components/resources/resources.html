@@ -1,16 +1,23 @@
 <div class="resources">
+    <loading v-if="loading"></loading>
     <h2>Resources</h2>
-    <div class="resource-list-links">
-        <h3>Links</h3>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
-    <div class="resource-list-videos">
-        <h3>Videos</h3>
-        <ul>
-            <li></li>
-        </ul>
+    <div class="resource-wrapper">
+        <div class="resource-list-links">
+            <h3>Links</h3>
+            <ul>
+                <li v-for="link in filterLinks">
+                    <a class="single-resource" :href="link.url" target="_blank">{{link.info}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="resource-list-videos">
+            <h3>Videos</h3>
+            <ul>
+                <li v-for="video in filterVideos">
+                    <a class="single-resource" :href="video.url" target="_blank">{{video.info}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <form class="add-resource" action="index.html" method="post">
         <input class="add-resource-input" type="url" name="resource" value="" placeholder="Add URL">

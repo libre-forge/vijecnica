@@ -7,25 +7,55 @@
     flex-direction: column;
 }
 
-:host {
-    --resource-list: {
-        background: white;
-        padding: 0.5rem 1rem;
-        border-bottom: 3px solid var(--color--negative-primary);
-    }
+h2,
+h3 {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-bottom: 3px solid var(--color--negative-primary);
+    font-weight: 100;
+    color: var(--color--secondary);
+}
+
+h2 {
+    border-bottom: 1rem solid var(--color--negative-primary);
+}
+
+.resource-wrapper {
+    flex: 1;
+    max-height: calc(100vh - 190px);
+    overflow-y: auto;
 }
 
 .resource-list-links,
 .resource-list-videos {
-    @apply --resource-list;
+    border-bottom: 1rem solid var(--color--negative-primary);
 }
 
-h2 {
-    @apply --resource-list;
-
+.resource-list-links ul,
+.resource-list-videos ul {
+    list-style-type: none;
     margin: 0;
-    font-weight: 100;
-    color: var(--color--secondary);
+    padding: 0;
+}
+
+.resource-list-links li,
+.resource-list-videos li {
+    border-bottom: 1px solid var(--color--negative-primary);
+}
+
+.single-resource {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    color: var(--color--primary);
+    font-size: var(--font-size--small);
+    transition: all 0.2s linear;
+    background: white;
+}
+
+.single-resource:hover {
+    background: #f6f6f6;
+    color: var(--color--action-primary);
 }
 
 .add-resource {
