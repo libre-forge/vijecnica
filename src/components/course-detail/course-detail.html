@@ -1,0 +1,20 @@
+<div class="course-detail">
+    <loading v-if="loading"></loading>
+    <h1 class="detail-name">{{course.name}}</h1>
+    <h2 class="detail-description">{{ course.description }}</h2>
+    <p>status: {{ course.status }}</p>
+    <ul class="course-members">
+        <li>
+            <img class="course-members-avatar course-members-owner" :src="course.owner.avatar" :alt="course.owner.username">
+            <p class="course-members-username">{{course.owner.username}}</p>
+        </li>
+        <li v-for="member in course.members">
+            <img class="course-members-avatar" :src="member.avatar" :alt="member.username">
+            <p class="course-members-username">{{member.username}}</p>
+        </li>
+    </ul>
+    <div class="course-options">
+        <button type="button" name="start-course" v-if="course.status === 'active'">Start Course</button>
+        <button type="button" name="end-course" v-if="course.status === 'ongoing'">Finish Course</button>
+    </div>
+</div>

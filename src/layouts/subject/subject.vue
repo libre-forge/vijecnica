@@ -1,13 +1,13 @@
-<template src='./course.html'></template>
+<template src='./subject.html'></template>
 
-<style scoped src='./course.css'></style>
+<style scoped src='./subject.css'></style>
 
 <script>
-import courseDetail from '../../components/course-detail/course-detail'
+import subjectDetail from '../../components/subject-detail/subject-detail'
 import wall from '../../components/wall/wall'
 
 export default {
-    name: 'course',
+    name: 'subject',
     data: function () {
         return {
             user: {
@@ -19,14 +19,9 @@ export default {
         }
     },
     components: {
-        courseDetail,
+        subjectDetail,
+        // resourcesList,
         wall
-        // subjectList,
-    },
-    methods: {
-        getUser: function () {
-            console.log('get User and overwrite var user')
-        }
     }
 }
 </script>

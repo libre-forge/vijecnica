@@ -1,8 +1,90 @@
-.course-card {
-    background: white;
-    border: 1px solid #e2e2e2;
-    margin: 1rem;
-    padding: 1rem;
-    width: 300px;
-    height: 200px;
+.CourseCard {
+    height: calc(var(--u) * 50);
+    margin: var(--u);
+    padding: var(--padding--card);
+    border-radius: var(--border-radius);
+    background-color: white;
+    flex: 0 0 calc(25% - 1rem);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow--card);
+}
+
+.CourseCard__title {
+    display: block;
+    font-size: var(--font-size--big);
+    text-decoration: none;
+    color: var(--color--primary);
+    line-height: var(--line-height--title);
+    font-weight: bold;
+    margin-bottom: var(--u3);
+}
+
+.CourseCard__description {
+    overflow: hidden;
+    position: relative;
+    line-height: var(--line-height--paragraph);
+    max-height: calc(var(--line-height--paragraph) * 5);
+    color: var(--color--secondary);
+    margin-bottom: var(--u3);
+}
+
+.CourseCard__description::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(var(--line-height--paragraph) * 4);
+    height: var(--line-height--paragraph);
+    margin-top: 0.25rem;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.CourseCard__info {
+    flex: 1;
+}
+
+.CourseCard__members {
+    display: flex;
+    align-items: baseline;
+}
+
+.CourseCard__membersIcon {
+    fill: var(--color--tertiary);
+    margin-right: var(--u);
+}
+
+.CourseCard__actions {
+    flex: 0;
+    padding-top: var(--u3);
+}
+
+.CourseCard__status {
+    display: inline-block;
+    font-size: var(--font-size--tiny);
+    text-transform: uppercase;
+    padding: var(--u) var(--u2);
+    transform: translateX(-1.75rem);
+    margin-bottom: var(--u2);
+}
+
+.CourseCard__status.ongoing {
+    background-color: var(--color--status-active);
+}
+
+.CourseCard__status.ongoing {
+    background-color: var(--color--status-archived);
+}
+
+.CourseCard__fork,
+.CourseCard__join {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size--big);
+    color: white;
+    justify-content: center;
+    padding: var(--padding--button);
+    background-color: var(--color--action-primary);
+    border-radius: var(--border-radius);
 }

@@ -1,24 +1,3 @@
-.Searchbox {
-    display: flex;
-    flex-direction: column;
-    padding: calc(var(--u) * 3);
-    background-color: var(--color--blackboard);
-    background-image: url('http://www.publicdomainpictures.net/pictures/110000/velka/chalkboard-or-blackboard.jpg');
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-}
-
-.Searchbox:not(.has--results) {
-    height: 100vh;
-    transition: height 0.3s var(--easing--search);
-}
-
-.Searchbox.has--results {
-    height: calc(var(--u) * 12);
-    transition: height 0.3s ease-in-out;
-}
-
 .Searchbox__content {
     display: flex;
     flex-direction: column;
@@ -34,43 +13,11 @@
     justify-content: center;
 }
 
-.Searchbox.has--results .Searchbox__content {
-    width: 100%;
-    transition: width 0.3s --easing--cubic;
-}
-
-.Searchbox:not(.has--results) .Searchbox__content {
-    width: auto;
-    transition: width 0.3s --easing--cubic;
-}
-
 .Searchbox__label {
-    position: absolute;
-    bottom: 4rem;
     font-family: Lato;
     padding: calc(var(--u) * 2);
     color: var(--color--negative-primary);
     font-size: var(--font-size--huge);
-}
-
-.Searchbox.has--results .Searchbox__label {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.Searchbox__logo {
-    position: absolute;
-    margin: calc(var(--u) * 2);
-    font-size: var(--font-size--huge);
-    font-weight: bold;
-}
-
-.Searchbox:not(.has--results) .Searchbox__logo {
-    bottom: 8rem;
-}
-
-.Searchbox.has--results .Searchbox__logo {
-    left: 1rem;
 }
 
 .Searchbox__logoLibre {
