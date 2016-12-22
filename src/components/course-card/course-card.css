@@ -64,7 +64,7 @@
     font-size: var(--font-size--tiny);
     text-transform: uppercase;
     padding: var(--u) var(--u2);
-    transform: translateX(-1.75rem);
+    transform: translateX(-1rem);
     margin-bottom: var(--u2);
 }
 
@@ -85,6 +85,8 @@
     color: white;
     justify-content: center;
     padding: var(--padding--button);
-    background-color: var(--color--action-primary);
+    background: var(--color--action-primary);
     border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2 linear;
 }

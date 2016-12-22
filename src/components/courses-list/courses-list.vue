@@ -21,6 +21,7 @@ const courseList = gql`
             pitch
             member_limit
             member_count
+            status
         }
     }
 `
@@ -29,7 +30,7 @@ export default {
     name: 'courses-list',
     data: function () {
         return {
-            courses: ''
+            courses: {}
         }
     },
     props: {
