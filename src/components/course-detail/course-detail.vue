@@ -4,6 +4,23 @@
 
 <script>
 import loading from '../../components/loading/loading'
+import md5 from 'md5'
+import gql from 'graphql-tag'
+
+const courseDetail = gql`
+    query CourseDetails($courseID: String!) {
+        course(id: $courseID) {
+            title
+            pitch
+            description
+            members {
+                id
+                email
+                name
+            }
+        }
+    }
+`
 
 export default {
     name: 'course-detail',
@@ -12,53 +29,38 @@ export default {
     },
     data () {
         return {
-            loading: false,
-            course: {
-                id: 1,
-                name: 'GraphSQL',
-                description: 'Learn GraphSQL',
-                owner: {
-                    id: 1,
-                    username: 'Leslie Burton',
-                    avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
-                    email: 'leslie.burton45@example.com'
-                },
-                members: [{
-                    id: 2,
-                    username: 'Lorraine Berry',
-                    avatar: 'https://randomuser.me/api/portraits/women/75.jpg',
-                    email: 'lorraine.berry88@example.com'
-                }, {
-                    id: 3,
-                    username: 'Mark Moreno',
-                    avatar: 'https://randomuser.me/api/portraits/men/58.jpg',
-                    email: 'mark.moreno65@example.com'
-                }, {
-                    id: 4,
-                    username: 'Jared Henry',
-                    avatar: 'https://randomuser.me/api/portraits/men/52.jpg',
-                    email: 'jared.henry58@example.com'
-                }],
-                members_limit: 10,
-                status: 'active'
-            }
+            course: '',
+            getAvatar: this.getAvatar
         }
     },
-    created () {
-        this.fetchData()
+    props: {
+        courseId: {
+            type: String,
+            required: true
+        }
+    },
+    apollo: {
+        course: {
+            query: courseDetail,
+            variables () {
+                console.log(this.courseId)
+                return {
+                    courseID: this.courseId
+                }
+            },
+            result (coursee) {
+                console.log(this)
+                this.course = coursee.course
+            },
+            loadingKey: 'loading'
+        }
     },
     components: {
         loading
     },
     methods: {
-        fetchData () {
-            console.log('API CALL -> get course data based on', this.id)
-            this.loading = true
-            // On success promise
-            setTimeout(() => {
-                console.log('Update course', this.id)
-                this.loading = false
-            }, 3000)
+        getAvatar (email) {
+            return md5(email)
         }
     }
 }
