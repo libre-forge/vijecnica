@@ -1,13 +1,15 @@
 import storage from './localStorage'
+import md5 from 'md5'
 
-export function isAuthenticated () {
-    return !!storage.get('user', 'token')
+const user = {
+    isAuthenticated: () => !!storage.get('user', 'token'),
+    token: () => storage.get('user', 'token'),
+    username: () => storage.get('user', 'username'),
+    avatar: () => {
+        const email = storage.get('user', 'username')
+        console.log(`http://gravatar.com/avatar/${md5(email)}`)
+        return `http://gravatar.com/avatar/${md5(email)}`
+    }
 }
 
-export function getToken () {
-    return storage.get('user', 'token')
-}
-
-export function getUsername () {
-    return storage.get('user', 'username')
-}
+export default user
