@@ -14,8 +14,8 @@
     </ul>
     <div class="right user">
         <router-link class="nav-menu" :to="{name: 'home'}">
-            <span class="username">Gabriel Montgomery</span>
-            <img class="user-pic" src="https://randomuser.me/api/portraits/men/81.jpg">
+            <span class="username">{{ username }}</span>
+            <img class="user-pic" :src="avatar">
         </router-link>
     </div>
 </nav>
