@@ -1,11 +1,11 @@
 <div class="detail">
-    <router-link class="detail-course"
+    <router-link class="back-detail-course"
             v-if="subject.course && subject.course.id"
             :to="{ name: 'course', params: { id: subject.course.id }}">
         <span>&#8592;</span>
         {{ subject.course.title }}
     </router-link>
     <h1 class="detail-name">{{ subject.title }}</h1>
-    <h2 class="detail-description">{{ subject.description }}</h2>
+    <p class="detail-description">{{ subject.description }}</p>
     <p v-if="subject.finished_at">finished date: {{ subject.finished_at }}</p>
 </div>

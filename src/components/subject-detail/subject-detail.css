@@ -3,17 +3,25 @@
     margin: 0.3rem;
     position: relative;
     flex: 1;
+}
+
+.back-detail-course {
     padding: 1rem;
+    border-bottom: 1px solid var(--color--border);
+    text-decoration: none;
+    display: block;
+    color: var(--color--action-primary);
 }
 
-.detail-created-by {
+.detail-name {
+    padding: 1rem 1rem 0;
+    font-size: var(--font-size--huge);
+    font-weight: lighter;
     display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
+    align-items: center;
+    margin: 0;
 }
 
-.detail-avatar {
-    width: 5rem;
-    border: 3px solid rgb(112, 254, 1);
-    border-radius: 50%;
+.detail-description {
+    padding: 0 1rem 1rem;
 }
