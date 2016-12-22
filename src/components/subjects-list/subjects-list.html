@@ -1,5 +1,5 @@
 <div v-if="subjects" class="subjectList">
-    <h2>Content</h2>
+    <h2>Course Syllabus</h2>
     <ul class="subject-items" v-if="subjects.length > 0">
         <li v-for="subject in subjects">
             <subject-item :subject="subject" :course-id="courseId"></subject-item>

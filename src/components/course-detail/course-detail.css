@@ -3,11 +3,49 @@
     margin: 0.3rem;
     position: relative;
     flex: 1;
+}
+
+.detail-name {
     padding: 1rem;
+    font-size: var(--font-size--huge);
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.detail-description {
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--color--border);
+}
+
+.detail-name.active span {
+    background-color: var(--color--status-active);
+    padding: 0.3rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: white;
+    font-size: var(--font-size--small);
 }
 
 .course-members {
-    display: flex;
+    padding: 1rem;
+}
+
+.course-members h2 {
+    font-size: var(--font-size--big);
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.course-monitor {
+    color: var(--color--status-active);
+    padding: 0.3rem;
+    display: inline-block;
+    font-size: var(--font-size--tiny);
+}
+
+.course-members ul {
     margin: 0;
     padding: 0;
 }
@@ -15,7 +53,6 @@
 .course-members li {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin-right: 1rem;
     border: 3px solid transparent;
@@ -26,6 +63,7 @@
 }
 
 .course-members-avatar {
-    width: 5rem;
+    width: 3rem;
+    margin-right: 1rem;
     border-radius: 50%;
 }
