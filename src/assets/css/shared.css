@@ -64,9 +64,6 @@ textarea {
     font-size: 1rem;
 }
 
-[type="password"],
-[type="search"],
-[type="text"],
 button,
 fieldset,
 input,
@@ -76,6 +73,10 @@ textarea {
     border: none;
     outline: none;
     appearance: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 fieldset {
@@ -90,4 +91,11 @@ button {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.Button--primary {
+    padding: var(--padding--button);
+    background-color: var(--color--action-primary);
+    color: white;
+    border-radius: var(--border-radius);
 }
