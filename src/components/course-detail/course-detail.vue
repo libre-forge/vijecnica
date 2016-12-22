@@ -13,7 +13,9 @@ const courseDetail = gql`
             title
             pitch
             description
-            members {
+            created_by
+            status
+            members{
                 id
                 email
                 name
@@ -43,13 +45,11 @@ export default {
         course: {
             query: courseDetail,
             variables () {
-                console.log(this.courseId)
                 return {
                     courseID: this.courseId
                 }
             },
             result (coursee) {
-                console.log(this)
                 this.course = coursee.course
             },
             loadingKey: 'loading'
