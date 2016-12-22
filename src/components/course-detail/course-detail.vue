@@ -13,7 +13,11 @@ const courseDetail = gql`
             title
             pitch
             description
-            created_by
+            created_by {
+                id
+                email
+                name
+            }
             status
             members{
                 id
@@ -31,8 +35,7 @@ export default {
     },
     data () {
         return {
-            course: '',
-            getAvatar: this.getAvatar
+            course: undefined
         }
     },
     props: {
@@ -49,8 +52,8 @@ export default {
                     courseID: this.courseId
                 }
             },
-            result (coursee) {
-                this.course = coursee.course
+            result (course) {
+                this.course = course.course
             },
             loadingKey: 'loading'
         }
@@ -59,8 +62,8 @@ export default {
         loading
     },
     methods: {
-        getAvatar (email) {
-            return md5(email)
+        getAvatar (user) {
+            return `http://gravatar.com/avatar/${md5(user.email)}`
         }
     }
 }
