@@ -1,3 +1,22 @@
-.add-course-wizard {
+.AddCourse__form {
     display: block;
+    width: 80vw;
+    max-width: 960px;
+}
+
+.AddCourse__label {
+    display: block;
+    color: var(--color--secondary);
+    margin-bottom: var(--u);
+}
+
+.AddCourse__fieldset {
+    padding: var(--u2) 0;
+}
+
+.AddCourse__inputText {
+    width: 100%;
+    border: 1px solid var(--color--border);
+    border-radius: var(--border-radius);
+    padding: var(--padding--input-text);
 }

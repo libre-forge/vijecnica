@@ -1,13 +1,15 @@
-<div class="input-subjects">
-    <input type="text" :id="id" :name="name"
+<div class="SubjectsInput">
+    <div class="SubjectsInput__controls">
+        <input class="SubjectsInput__input" type="text" :id="id" :name="name"
            v-model="newSubject"
            @keydown.enter.stop.prevent="addSubject"
            placeholder="Add a new subject">
-    <button type="button" @click.prevent="addSubject">+ Add</button>
-    <ul>
-        <li v-for="(subject, index) in value">
-            {{ subject }}
-            <button type="button" @click="removeSubject(index)">X</button>
+        <button class="SubjectsInput__addButton" type="button" @click.prevent="addSubject">+ Add</button>
+    </div>
+    <ul class="SubjectsInput__list">
+        <li class="SubjectsInput__subject" v-for="(subject, index) in value">
+            <div class="SubjectInput__subjectName">{{ subject }}</div>
+            <button class="SubjectsInput__delete" type="button" @click="removeSubject(index)">X</button>
         </li>
     </ul>
 </div>

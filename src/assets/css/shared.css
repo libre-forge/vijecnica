@@ -12,6 +12,7 @@
     --u3: calc(var(--u) * 3);
     --padding--search: calc(var(--u) * 2);
     --padding--searchbox: 1rem 1.5rem 1rem 1rem;
+    --padding--input-text: 0.75rem;
     --padding--card: var(--u3);
     --padding--button: calc(var(--u) * 2) var(--u3);
     --border-radius: 0.25rem;
@@ -20,6 +21,8 @@
     --color--secondary: hsl(140, 4%, 32%);
     --color--tertiary: hsl(140, 4%, 68%);
     --color--blackboard: hsl(140, 4%, 14%);
+    --color--body-bg: hsl(140, 2%, 98%);
+    --color--border: hsl(140, 2%, 80%);
     --color--action-primary: hsl(350, 60%, 44%);
     --color--negative-primary: hsl(0, 0%, 88%);
     --color--status-active: hsl(140, 60%, 44%);
@@ -61,9 +64,6 @@ textarea {
     font-size: 1rem;
 }
 
-[type="password"],
-[type="search"],
-[type="text"],
 button,
 fieldset,
 input,
@@ -73,6 +73,10 @@ textarea {
     border: none;
     outline: none;
     appearance: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 fieldset {
@@ -87,4 +91,11 @@ button {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.Button--primary {
+    padding: var(--padding--button);
+    background-color: var(--color--action-primary);
+    color: white;
+    border-radius: var(--border-radius);
 }

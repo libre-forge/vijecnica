@@ -8,17 +8,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .searchbox-wrapper.active {
     flex-direction: row;
+    padding: 0 var(--u3);
     justify-content: space-between;
-    height: calc(var(--u) * 12);
-    transition: height 0.5s var(--easing--cubic);
+    min-height: calc(var(--u) * 12);
+    transition: all 0.5s var(--easing--cubic);
 }
 
-.searchbox-wrapper.active .logo {
+.searchbox-wrapper.active .Logo {
     width: 10rem;
 }
 
@@ -27,4 +28,18 @@
     text-decoration: none;
     font-size: var(--font-size--big);
     padding: 1rem;
+}
+
+.Button__createCourse {
+    display: inline-block;
+    padding: var(--padding--button);
+    background-color: var(--color--action-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+}
+
+.searchbox-wrapper:not(.active) .Button__createCourse {
+    position: fixed;
+    bottom: var(--u3);
 }

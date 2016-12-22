@@ -1,3 +1,50 @@
-.subjects-input {
-    display: block;
+.SubjectsInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.SubjectsInput__controls {
+    display: flex;
+}
+
+.SubjectsInput__input {
+    width: 20rem;
+    border: 1px solid var(--color--border);
+    border-radius: var(--border-radius);
+    padding: var(--padding--input-text);
+    margin-right: var(--u);
+}
+
+.SubjectsInput__addButton {
+    padding: var(--padding--input-text);
+    background-color: var(--color--secondary);
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.SubjectsInput__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin: var(--u3) 0;
+}
+
+.SubjectsInput__subject {
+    padding: var(--padding--button);
+    border-radius: var(--border-radius);
+    display: flex;
+    margin-right: var(--u);
+    background-color: var(--color--border);
+}
+
+.SubjectsInput__delete {
+    flex: 0;
+    font-size: var(--font-size--small);
+}
+
+.SubjectsInput__subjectName {
+    display: inline-block;
+    margin-right: var(--u2);
+    flex: 1;
 }
