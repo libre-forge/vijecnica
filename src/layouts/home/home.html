@@ -2,7 +2,7 @@
     <div class="searchbox-wrapper" :class="{'active': displayResults}">
         <img class="logo" src="../../assets/logo.gif" alt="LibreForge">
         <searchbox @getcourses="getCourses"></searchbox>
-        <router-link :to="{name: 'add-course'}">...or create a new course</router-link>
+        <router-link class="add-course" :to="{name: 'add-course'}">...or create a new course</router-link>
     </div>
     <courses-list :subject="subject"></courses-list>
 </div>

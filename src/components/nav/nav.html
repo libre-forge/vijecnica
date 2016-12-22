@@ -1,0 +1,21 @@
+<nav>
+    <div class="left logo">
+        <router-link :to="{name: 'home'}">
+            <img class="logo" src="../../assets/logo.gif" alt="LibreForge">
+        </router-link>
+    </div>
+    <ul class="center">
+        <li>
+            <router-link class="nav-menu" :to="{name: 'home'}">Find</router-link>
+        </li>
+        <li>
+            <router-link class="nav-menu" :to="{name: 'add-course'}">Create</router-link>
+        </li>
+    </ul>
+    <div class="right user">
+        <router-link class="nav-menu" :to="{name: 'home'}">
+            <span class="username">Gabriel Montgomery</span>
+            <img class="user-pic" src="https://randomuser.me/api/portraits/men/81.jpg">
+        </router-link>
+    </div>
+</nav>

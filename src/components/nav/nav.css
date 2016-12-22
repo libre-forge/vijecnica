@@ -1,0 +1,47 @@
+nav {
+    width: 100vw;
+    background: var(--color--blackboard);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    width: 10rem;
+    margin-left: 0.5rem;
+}
+
+.center {
+    list-style-type: none;
+    margin: 0;
+}
+
+.center li {
+    float: left;
+    display: inline-block;
+}
+
+.nav-menu {
+    color: currentColor;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: var(--font-size--big);
+}
+
+.user .nav-menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    font-size: var(--font-size--normal);
+}
+
+.username {
+    color: currentColor;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+.user-pic {
+    width: 3rem;
+}
