@@ -3,120 +3,42 @@
 <style scoped src='./resources.css'></style>
 
 <script>
-import loading from '../../components/loading/loading'
-
 export default {
     name: 'resources',
     data () {
         return {
-            resources: [],
-            loading: false,
             newResource: {
-                url: '',
-                info: '',
-                type: ''
+                id: '35120310-7a56-4cd5-80e6-3b40c2814748',
+                uri: '',
+                title: '',
+                description: '',
+                mime: 'url',
+                subject: this.subjectId,
+                created_by: '588034cb-4c84-4f36-abcf-fa511aba0de3'
             },
             resourceUrl: ''
         }
     },
     props: {
-        subject: {
+        resources: {
+            type: Array,
+            required: true
+        },
+        subjectId: {
             type: String,
             required: true
         }
     },
-    created () {
-        this.fetchData()
-    },
-    components: {
-        loading
-    },
-    computed: {
-        filterLinks: function () {
-            return this.resources.filter(link =>
-                link.type === 'url'
-            )
-        },
-        filterVideos: function () {
-            return this.resources.filter(link =>
-                link.type === 'video'
-            )
-        }
-    },
     methods: {
-        generateRandomText: function () {
-            return 'http://' + Math.random().toString(36).substring(2, 60) + '.com'
+        generateRandomText: function (pre, num, post) {
+            return pre + Math.random().toString(36).substring(2, num) + post
         },
         addResource: function () {
-            this.newResource.url = this.resourceUrl
-            this.newResource.info = this.generateRandomText()
-            this.newResource.type = this.generateRandomText()
-            this.resources.push(Object.assign({}, this.newResource))
+            this.newResource.uri = this.resourceUrl
+            this.newResource.title = this.generateRandomText('A random ', 30, ' text')
+            this.newResource.description = this.generateRandomText('http://', 120, '.com')
+            this.resources.push(Object.assign({}, this.newResource)) // MAKE API CALL
             this.resourceUrl = ''
-            console.log(this.resourceUrl)
-        },
-        fetchData: function () {
-            this.resources = [{
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'Official Resources',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#external-resources',
-                info: 'External Resources',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#community',
-                info: 'Vue Community',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#podcasts',
-                info: 'Vue podcasts',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-examples',
-                info: 'Vue Official examples',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#tutorials',
-                info: 'Vue tutorials',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#development-tools',
-                info: 'Development Tools',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#syntax-highlighting',
-                info: 'syntax highlighting',
-                type: 'url'
-            }, {
-                url: 'https://auth0.com/blog/2015/11/13/build-an-app-with-vuejs/',
-                info: 'Build an App with Vue.js: From Authentication to Calling an API on Auth0 blog',
-                type: 'video'
-            }, {
-                url: 'https://scotch.io/tutorials/create-a-github-file-explorer-using-vue-js',
-                info: 'Create a GitHub File Explorer Using Vue.js on Scotch.io',
-                type: 'video'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'VueJs: Components on Coligo.io',
-                type: 'video'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'Develop a Reactive Invoice App using Vue.js on craigmckenna.com',
-                type: 'video'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'Building a Real-Time Web Analytics Dashboard with NodeJs, Socket.io, and VueJs on Coligo.io',
-                type: 'video'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'VueJS 2 French tutorial Français par Grafikart',
-                type: 'url'
-            }, {
-                url: 'https://github.com/vuejs/awesome-vue#official-resources',
-                info: 'Medium like Image Loading with Vue.js',
-                type: 'url'
-            }]
         }
     }
 }
