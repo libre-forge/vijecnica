@@ -5,7 +5,9 @@
 }
 
 .AddCourse__label {
+    display: block;
     color: var(--color--secondary);
+    margin-bottom: var(--u);
 }
 
 .AddCourse__fieldset {
@@ -17,11 +19,4 @@
     border: 1px solid var(--color--border);
     border-radius: var(--border-radius);
     padding: var(--padding--input-text);
-}
-
-.AddCourse__create {
-    padding: var(--padding--button);
-    background-color: var(--color--action-primary);
-    color: white;
-    border-radius: var(--border-radius);
 }
