@@ -1,0 +1,30 @@
+.Loginbox__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Loginbox__label {
+    font-family: Lato;
+    color: var(--color--negative-primary);
+    font-size: var(--font-size--normal);
+}
+
+.Loginbox__input {
+    font-size: var(--font-size--big);
+    display: block;
+    width: 100%;
+    padding: var(--padding--searchbox);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--u2);
+}
+
+.Loginbox__submit {
+    color: var(--color--negative-primary);
+    font-size: var(--font-size--big);
+    display: block;
+    width: 100%;
+    padding: var(--padding--searchbox);
+    border-radius: var(--border-radius);
+    background: var(--color--status-active);
+}
