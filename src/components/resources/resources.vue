@@ -21,7 +21,6 @@ export default {
     },
     props: {
         resources: {
-            type: Array,
             required: true
         },
         subjectId: {

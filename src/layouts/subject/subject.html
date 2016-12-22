@@ -1,8 +1,8 @@
-<div class="subject">
+<div class="subject" v-if="subject">
     <navigation></navigation>
     <div class="subject-wrapper">
-        <subject-detail></subject-detail>
-        <resources :subjectId="subjectId" :resources="subject.resources"></resources>
+        <subject-detail :subject="subject"></subject-detail>
+        <resources :subject-id="subjectId" :resources="subject.resources"></resources>
         <wall :user="user"></wall>
     </div>
 </div>

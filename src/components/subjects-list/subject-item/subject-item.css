@@ -24,3 +24,11 @@
     width: 0.9rem;
     height: 0.9rem;
 }
+
+.subject-item.ongoing {
+    font-weight: bolder;
+}
+
+.subject-item.finished {
+    color: var(--color--status-archived);
+}

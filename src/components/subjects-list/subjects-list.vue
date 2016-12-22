@@ -15,6 +15,7 @@ const subjectsListQuery = gql`
             order
             resource_count
             finished_at
+            status
         }
     }
 `

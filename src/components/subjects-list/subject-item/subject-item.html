@@ -1,4 +1,4 @@
-<router-link class="subject-item" :to="{ name: 'subject', params: { courseId: courseId, subjectId: subject.id }}">
+<router-link class="subject-item" :class="subject.status" :to="{ name: 'subject', params: { courseId: courseId, subjectId: subject.id }}">
     <span class="subject-title">{{ subject.title }}</span>
     <span class="subject-finished-date">{{ subject.finished_at }}</span>
     <span class="subject-total-resources">

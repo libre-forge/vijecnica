@@ -96,7 +96,7 @@ export default {
                     }
                 }]
                 this.loading = false
-            }, 3000)
+            }, 10)
         },
         sendComment () {
             // THIS IS A ÑAPA THAT SHOULD BE FIXED IN THE FUTURE

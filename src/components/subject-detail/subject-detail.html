@@ -1,19 +1,11 @@
 <div class="detail">
-    <loading v-if="loading"></loading>
-        <router-link class="detail-course"
-                v-if="subject.course !== undefined"
-                :to="{ name: 'course', params: { id: subject.course.id }}">
-            <span>&#8592;</span>
-            {{ subject.course.title }}
-        </router-link>
-    <h1 class="detail-name">{{subject.name}}</h1>
+    <router-link class="detail-course"
+            v-if="subject.course && subject.course.id"
+            :to="{ name: 'course', params: { id: subject.course.id }}">
+        <span>&#8592;</span>
+        {{ subject.course.title }}
+    </router-link>
+    <h1 class="detail-name">{{ subject.title }}</h1>
     <h2 class="detail-description">{{ subject.description }}</h2>
-    <p>finished date: {{ subject.finished_date }}</p>
-    <div class="detail-created-by"
-         v-if="subject.created_by !== undefined">
-        <img class="detail-avatar"
-             :src="subject.created_by.avatar"
-             :alt="subject.created_by.username">
-        <p class="detail-username">{{ subject.created_by.username }}</p>
-    </div>
+    <p v-if="subject.finished_at">finished date: {{ subject.finished_at }}</p>
 </div>
