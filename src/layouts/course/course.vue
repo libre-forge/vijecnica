@@ -18,7 +18,8 @@ export default {
                 username: 'Leslie Burton',
                 avatar: 'https://randomuser.me/api/portraits/women/35.jpg',
                 email: 'leslie.burton45@example.com'
-            }
+            },
+            courseid: this.$route.params.id
         }
     },
     components: {
