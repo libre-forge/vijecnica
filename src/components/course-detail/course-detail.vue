@@ -7,9 +7,11 @@ import loading from '../../components/loading/loading'
 
 export default {
     name: 'course-detail',
+    prop: {
+        id: {}
+    },
     data () {
         return {
-            id: this.$route.params.id,
             loading: false,
             course: {
                 id: 1,

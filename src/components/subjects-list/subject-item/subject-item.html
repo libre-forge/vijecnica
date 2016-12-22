@@ -1,0 +1,7 @@
+<div class="subject-item">
+    <router-link :to="{ name: 'subject', params: { courseId: courseId, subjectId: subject.id }}">
+        {{ subject.title }}
+    </router-link>
+    <span class="finished-date">{{ subject.finished_at }}</span>
+    <span class="total-resources">{{ subject.resource_count }}</span>
+</div>

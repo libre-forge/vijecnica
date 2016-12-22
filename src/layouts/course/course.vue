@@ -5,12 +5,14 @@
 <script>
 import Navigation from '../../components/nav/nav'
 import courseDetail from '../../components/course-detail/course-detail'
+import subjectsList from '../../components/subjects-list/subjects-list'
 import wall from '../../components/wall/wall'
 
 export default {
     name: 'course',
     data: function () {
         return {
+            id: this.$route.params.id,
             user: {
                 id: 1,
                 username: 'Leslie Burton',
@@ -22,8 +24,8 @@ export default {
     components: {
         Navigation,
         courseDetail,
+        subjectsList,
         wall
-        // subjectList,
     },
     methods: {
         getUser: function () {

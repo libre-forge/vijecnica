@@ -1,0 +1,10 @@
+<div v-if="subjects" class="subjectList">
+    <h2>Content</h2>
+    <button type="button">Add a new subject</button>
+    <ul class="subject-items" v-if="subjects.length > 0">
+        <li class="subject-item" v-for="subject in subjects">
+            <subject-item :subject="subject" :course-id="courseId"></subject-item>
+        </li>
+    </ul>
+    <div v-else class="no-subjects">-- no subjects yet --</div>
+</div>
