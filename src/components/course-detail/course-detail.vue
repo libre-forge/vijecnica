@@ -30,9 +30,6 @@ const courseDetail = gql`
 
 export default {
     name: 'course-detail',
-    prop: {
-        id: {}
-    },
     data () {
         return {
             course: undefined

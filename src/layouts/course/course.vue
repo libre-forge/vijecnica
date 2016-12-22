@@ -12,7 +12,6 @@ export default {
     name: 'course',
     data: function () {
         return {
-            id: this.$route.params.id,
             user: {
                 id: 1,
                 username: 'Leslie Burton',
