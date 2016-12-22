@@ -5,6 +5,7 @@
 <script>
 import subjectDetail from '../../components/subject-detail/subject-detail'
 import wall from '../../components/wall/wall'
+import resources from '../../components/resources/resources'
 
 export default {
     name: 'subject',
@@ -20,7 +21,7 @@ export default {
     },
     components: {
         subjectDetail,
-        // resourcesList,
+        resources,
         wall
     }
 }

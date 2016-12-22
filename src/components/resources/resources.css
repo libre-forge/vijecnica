@@ -1,0 +1,51 @@
+.resources {
+    background: white;
+    margin: 0.3rem;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+:host {
+    --resource-list: {
+        background: white;
+        padding: 0.5rem 1rem;
+        border-bottom: 3px solid var(--color--negative-primary);
+    }
+}
+
+.resource-list-links,
+.resource-list-videos {
+    @apply --resource-list;
+}
+
+h2 {
+    @apply --resource-list;
+
+    margin: 0;
+    font-weight: 100;
+    color: var(--color--secondary);
+}
+
+.add-resource {
+    padding: 1rem;
+    display: flex;
+    margin-top: auto;
+}
+
+.add-resource-input {
+    flex: 1;
+    background: var(--color--negative-primary);
+    margin-right: 0.3rem;
+    padding: 0.3rem;
+}
+
+.add-resource-submit {
+    flex: 1;
+    background: var(--color--action-primary);
+    color: white;
+    flex-basis: 8rem;
+    padding: 0.5rem;
+    flex-grow: 0;
+}
