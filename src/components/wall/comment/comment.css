@@ -1,22 +1,16 @@
 .comment {
-    background: white;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    margin-right: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     align-items: flex-start;
-    border-radius: 0.5rem;
+    border-top: 1px solid var(--color--border);
 }
 
 .comment.comment-me {
-    margin-right: 0;
-    margin-left: 1rem;
+    border-left: 5px solid var(--color--action-primary);
 }
 
 .comment.comment-me .comment-avatar {
     order: 2;
-    margin-right: 0;
-    margin-left: 1rem;
 }
 
 .comment-avatar {
