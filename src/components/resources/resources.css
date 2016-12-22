@@ -22,7 +22,7 @@ h2 {
 
 .resource-wrapper {
     flex: 1;
-    max-height: calc(100vh - 190px);
+    max-height: calc(100vh - 200px);
     overflow-y: auto;
 }
 

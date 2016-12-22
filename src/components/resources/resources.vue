@@ -10,7 +10,13 @@ export default {
     data () {
         return {
             resources: [],
-            loading: false
+            loading: false,
+            newResource: {
+                url: '',
+                info: '',
+                type: ''
+            },
+            resourceUrl: ''
         }
     },
     props: {
@@ -38,6 +44,17 @@ export default {
         }
     },
     methods: {
+        generateRandomText: function () {
+            return 'http://' + Math.random().toString(36).substring(2, 60) + '.com'
+        },
+        addResource: function () {
+            this.newResource.url = this.resourceUrl
+            this.newResource.info = this.generateRandomText()
+            this.newResource.type = this.generateRandomText()
+            this.resources.push(Object.assign({}, this.newResource))
+            this.resourceUrl = ''
+            console.log(this.resourceUrl)
+        },
         fetchData: function () {
             this.resources = [{
                 url: 'https://github.com/vuejs/awesome-vue#official-resources',

@@ -19,8 +19,8 @@
             </ul>
         </div>
     </div>
-    <form class="add-resource" action="index.html" method="post">
-        <input class="add-resource-input" type="url" name="resource" value="" placeholder="Add URL">
+    <form class="add-resource" @submit.prevent="addResource()">
+        <input class="add-resource-input" type="text" v-model="resourceUrl" placeholder="Add URL" required>
         <button class="add-resource-submit" type="submit" name="button">Add resource</button>
     </form>
 </div>
