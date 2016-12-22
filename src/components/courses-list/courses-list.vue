@@ -40,8 +40,8 @@ export default {
                 query: courseFilter,
                 variables: {
                     filter: {
-                        byTopic: '',
-                        byStatus: ''
+                        byTopic: itemToSearch,
+                        byStatus: 'active'
                     }
                 }
             })
