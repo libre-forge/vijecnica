@@ -1,0 +1,9 @@
+<div v-if="subjects" class="subjectList">
+    <h2>Content</h2>
+    <button type="button">Add a new subject</button>
+    <ul class="subject-items">
+        <li class="subject-item" v-for="subject in subjects">
+            <ubject-item :subject="subject" :course-id="courseId"></subject-item>
+        </li>
+    </ul>
+</div>

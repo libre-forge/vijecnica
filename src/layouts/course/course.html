@@ -2,42 +2,7 @@
     <navigation></navigation>
     <div class="course-wrapper">
         <course-detail></course-detail>
-        <subjects-lists> <!-- TODO -->
-            <h2>Content</h2>
-            <button>Add a new subject</button>
-            <ul>
-                <li class="finished" >
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 1 }}">
-                        Introduction
-                    </router-link>
-                </li>
-                <li class="finished" >
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 2 }}">
-                        Queries and Mutations
-                    </router-link>
-                </li>
-                <li class="finished" >
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 3 }}">
-                        Schemas and Types
-                    </router-link>
-                </li>
-                <li class="finished" >
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 4 }}">
-                        Validation
-                    </router-link>
-                </li>
-                <li class="pending" >
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 5 }}">
-                        Execution
-                    </router-link>
-                </li>
-                <li>
-                    <router-link :to="{ name: 'subject', params: { courseId: 1, subjectId: 6 }}">
-                        Introspection
-                    </router-link>
-                </li>
-            </ul>
-        </subjects-lists> <!-- END TODO -->
+        <subjects-list></subjects-list>
         <wall :user="user"></wall>
     </div>
 </div>
