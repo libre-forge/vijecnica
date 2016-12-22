@@ -3,11 +3,13 @@
 
 <script>
 import AddCourseWizard from '../../components/add-course-wizard/add-course-wizard'
+import Navigation from '../../components/nav/nav'
 
 export default {
     name: 'AddCourse',
     components: {
-        AddCourseWizard
+        AddCourseWizard,
+        Navigation
     }
 }
 </script>

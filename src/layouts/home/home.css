@@ -21,3 +21,10 @@
 .searchbox-wrapper.active .logo {
     width: 10rem;
 }
+
+.add-course {
+    color: var(--color--action-primary);
+    text-decoration: none;
+    font-size: var(--font-size--big);
+    padding: 1rem;
+}

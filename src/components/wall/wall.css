@@ -13,7 +13,7 @@
 .wall-wrapper {
     flex: 1;
     overflow-y: auto;
-    max-height: calc(100vh - 75px);
+    max-height: calc(100vh - 130px);
 }
 
 .wall-timeline {

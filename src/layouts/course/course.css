@@ -1,7 +1,11 @@
 .course {
     background: var(--color--negative-primary);
-    display: flex;
+    min-height: calc(100vh - 53px);
+    height: 100%;
+}
+
+.course-wrapper {
     flex-direction: row;
-    min-height: 100vh;
+    display: flex;
     justify-content: space-between;
 }

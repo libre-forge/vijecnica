@@ -3,6 +3,7 @@
 <style scoped src='./course.css'></style>
 
 <script>
+import Navigation from '../../components/nav/nav'
 import courseDetail from '../../components/course-detail/course-detail'
 import wall from '../../components/wall/wall'
 
@@ -19,6 +20,7 @@ export default {
         }
     },
     components: {
+        Navigation,
         courseDetail,
         wall
         // subjectList,
