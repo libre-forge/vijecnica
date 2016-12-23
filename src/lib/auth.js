@@ -4,11 +4,12 @@ import md5 from 'md5'
 const user = {
     isAuthenticated: () => !!storage.get('user', 'token'),
     token: () => storage.get('user', 'token'),
-    username: () => storage.get('user', 'username'),
+    username: () => storage.get('user', 'name'),
     avatar: () => {
-        const email = storage.get('user', 'username')
+        const email = storage.get('user', 'email')
         return `http://gravatar.com/avatar/${md5(email)}`
-    }
+    },
+    get: () => storage.get('user')
 }
 
 export default user

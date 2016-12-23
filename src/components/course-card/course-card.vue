@@ -19,13 +19,15 @@ export default {
         joinToCourse: function (id) {
             if (user.isAuthenticated()) {
                 return router.push({
-                    name: 'add-course'
+                    path: `/course/${id}?join=true`
                 })
             }
 
             return router.push({
                 name: 'login',
-                query: { redirect: '/course/add' }
+                query: {
+                    redirect: `/course/${id}?join=true`
+                }
             })
         }
     }

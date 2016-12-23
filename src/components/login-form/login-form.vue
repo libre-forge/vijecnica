@@ -10,7 +10,14 @@ import storage from '../../lib/localStorage'
 
 const loginUser = gql`
     mutation userLogin($credentials: Credentials) {
-        login(credentials: $credentials) {token}
+        login(credentials: $credentials) {
+            token
+            user {
+                id
+                email
+                name
+            }
+        }
     }
 `
 
@@ -22,7 +29,7 @@ export default {
     data () {
         return {
             login: {
-                username: 'john.doe@gmail.com'
+                username: 'josemanuel.rosamoncayo@gmail.com'
             },
             errors: ''
         }
@@ -45,12 +52,10 @@ export default {
                     throw new Error(MSG_ERROR)
                 }
 
+                delete res.data.login.user.__typename
                 storage.set(
                     'user',
-                    {
-                        username: _this.login.username,
-                        token: res.data.login.token
-                    }
+                    res.data.login.user
                 )
 
                 if (_this.$route.query.redirect) {

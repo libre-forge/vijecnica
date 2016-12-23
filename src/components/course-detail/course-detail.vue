@@ -50,6 +50,11 @@ export default {
                 }
             },
             result (course) {
+                debugger
+                console.log(course.course)
+                course.course.members = course.course.members.filter(
+                    user => user.id !== course.course.created_by.id
+                )
                 this.course = course.course
             },
             loadingKey: 'loading'
