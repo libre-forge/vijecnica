@@ -3,6 +3,7 @@
 <style scoped src='./courses-list.css'></style>
 
 <script>
+import Navigation from '../nav/nav'
 import courseCard from '../course-card/course-card'
 import gql from 'graphql-tag'
 
@@ -33,7 +34,8 @@ export default {
         }
     },
     components: {
-        courseCard
+        courseCard,
+        Navigation
     },
     watch: {
         subject: function (itemToSearch) {

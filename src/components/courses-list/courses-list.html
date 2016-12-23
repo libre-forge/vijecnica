@@ -1,9 +1,11 @@
-<div v-if="subject && courses.lenght" class="Courses">
+<div v-if="subject && courses.length" class="Courses">
+    <navigation></navigation>
     <div class="Courses__filter"></div>
     <div class="Courses__list">
         <course-card v-for="course in courses" :course="course"></course-card>
     </div>
 </div>
 <div v-else-if="subject && !courses.lenght" class="Courses__empty">
+    <navigation></navigation>
     <p>No courses</p>
 </div>

@@ -7,16 +7,16 @@
     background-position: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
     min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    transition: all 0.5s var(--easing--cubic);
 }
 
 .searchbox-wrapper.active {
-    flex-direction: row;
-    padding: 0 var(--u3);
-    justify-content: space-between;
-    min-height: calc(var(--u) * 12);
-    transition: all 0.5s var(--easing--cubic);
+    transform: translateY(-100%);
 }
 
 .searchbox-wrapper.active .Logo {
