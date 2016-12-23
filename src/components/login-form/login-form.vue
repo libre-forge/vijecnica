@@ -53,7 +53,13 @@ export default {
                     }
                 )
 
-                router.push({ name: 'home' })
+                if (_this.$route.query.redirect) {
+                    return router.push({
+                        path: _this.$route.query.redirect
+                    })
+                }
+
+                return router.push({ name: 'home' })
             })
             .catch(res => {
                 window.alert(MSG_ERROR)

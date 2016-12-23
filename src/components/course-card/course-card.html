@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="CourseCard__actions">
-        <button class="CourseCard__join" v-if="course.status === 'active'" type="button" name="join">Join!</button>
+        <button class="CourseCard__join" v-if="course.status === 'active'" type="button" name="join" @click.prevent="joinToCourse(course.id)">Join!</button>
         <button class="CourseCard__fork" v-if="course.status === 'ongoing'" type="button" name="fork">fork!</button>
         <button class="CourseCard__fork" v-if="course.status === 'archived'" type="button" name="fork">fork!</button>
     </div>

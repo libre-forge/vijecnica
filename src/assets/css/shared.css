@@ -99,3 +99,7 @@ button {
     color: white;
     border-radius: var(--border-radius);
 }
+
+.hide {
+    visibility: hidden;
+}
