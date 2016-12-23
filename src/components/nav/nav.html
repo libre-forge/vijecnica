@@ -12,7 +12,7 @@
             <router-link class="nav-menu" :to="{name: 'add-course'}">Create</router-link>
         </li>
     </ul>
-    <div class="right user">
+    <div class="right user" :class="{ hide: !username }">
         <router-link class="nav-menu" :to="{name: 'home'}">
             <span class="username">{{ username }}</span>
             <img class="user-pic" :src="avatar">
