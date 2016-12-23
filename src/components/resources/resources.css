@@ -49,8 +49,7 @@ h2 {
 .description {
     font-size: var(--font-size--small);
     color: var(--color--tertiary);
-    display: inline-block;
-    margin-left: 0.5rem;
+    display: block;
 }
 
 .single-resource:hover {

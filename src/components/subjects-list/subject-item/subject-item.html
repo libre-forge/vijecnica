@@ -1,5 +1,5 @@
 <router-link class="subject-item" :class="subject.status" :to="{ name: 'subject', params: { courseId: courseId, subjectId: subject.id }}">
-    <span class="subject-title">{{ subject.title }}</span>
+    <span class="subject-title">{{ subject.order }}. {{ subject.title }}</span>
     <span class="subject-finished-date">{{ subject.finished_at }}</span>
     <span class="subject-total-resources">
         <svg class="Resources__icon" viewBox="0 0 26 28">
