@@ -59,7 +59,6 @@ export default {
                 }
             })
             .then(res => {
-                console.log(res)
                 this.courses = res.data.courses
             })
         }

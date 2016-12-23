@@ -36,10 +36,8 @@ export default {
                 mutation: courseCreate,
                 variables: { course: this.newCourse }
             }).then(res => {
-                console.log(res)
                 router.push({ name: 'course', params: { id: res.data.course.id } })
             }).catch(res => {
-                console.log(res)
                 // eslint-disable-next-line no-undef, no-alert
                 alert(`Error creating the course.\n ${res}`)
             })

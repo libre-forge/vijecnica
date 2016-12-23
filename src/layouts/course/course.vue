@@ -12,7 +12,7 @@ import user from '../../lib/auth'
 
 const joinToCourse = gql`
     mutation JoinToCourse($courseID: String!, $userID: String!) {
-        course(course: $courseID, member: $userID) {
+        join(course: $courseID, member: $userID) {
             id
         }
     }
@@ -33,23 +33,25 @@ export default {
         wall
     },
     created () {
-        debugger
-        console.log(this.courseid)
-        console.log(this.user.id)
-        if (this.$route.query && this.$route.query.join) {
-            this.$apollo.mutate({
-                mutate: joinToCourse,
-                variables: {
-                    courseID: this.courseid,
-                    userID: this.user.id
-                }
-            })
-            .then(() => console.log.bind())
-        }
+        this.join()
     },
     methods: {
         getUser: function () {
             console.log('get User and overwrite var user')
+        },
+        join: function () {
+            if (this.$route.query && this.$route.query.join) {
+                return this.$apollo.mutate({
+                    mutation: joinToCourse,
+                    variables: {
+                        courseID: this.courseid,
+                        userID: this.user.id
+                    }
+                })
+                .then(data => {
+                    console.log(data)
+                })
+            }
         }
     }
 }
