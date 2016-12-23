@@ -4,6 +4,7 @@
 
 <script>
 import Navigation from '../nav/nav'
+import Searchbox from '../searchbox/searchbox'
 import courseCard from '../course-card/course-card'
 import gql from 'graphql-tag'
 
@@ -34,21 +35,31 @@ export default {
         }
     },
     components: {
-        courseCard,
-        Navigation
+        Navigation,
+        Searchbox,
+        courseCard
     },
     watch: {
         subject: function (itemToSearch) {
+            this.doQuery(itemToSearch)
+        }
+    },
+    methods: {
+        editQuery: function (subjectToSearch) {
+            this.doQuery(subjectToSearch)
+        },
+        doQuery: function (subjectToSearch) {
             this.$apollo.query({
                 query: courseFilter,
                 variables: {
                     filter: {
-                        byTopic: itemToSearch,
+                        byTopic: subjectToSearch,
                         byStatus: 'active'
                     }
                 }
             })
             .then(res => {
+                console.log(res)
                 this.courses = res.data.courses
             })
         }
