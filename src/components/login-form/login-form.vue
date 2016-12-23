@@ -28,9 +28,7 @@ export default {
     name: 'login-form',
     data () {
         return {
-            login: {
-                username: 'josemanuel.rosamoncayo@gmail.com'
-            },
+            login: {},
             errors: ''
         }
     },
