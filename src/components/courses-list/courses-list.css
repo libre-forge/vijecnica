@@ -13,3 +13,26 @@
     margin: calc(var(--u) * 2) -1rem;
     flex-wrap: wrap;
 }
+
+.not-found {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found-icon {
+    width: 15rem;
+    fill: var(--color--border);
+}
+
+.not-found-text {
+    font-size: var(--font-size--big);
+    color: var(--color--primary);
+    text-align: center;
+}
+
+.not-found-text a {
+    text-decoration: none;
+    color: var(--color--action-primary);
+}
