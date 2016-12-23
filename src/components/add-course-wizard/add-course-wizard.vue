@@ -4,6 +4,7 @@
 <script>
 import subjectsInput from '../subjects-input/subjects-input'
 import gql from 'graphql-tag'
+// import user from '../../lib/auth'
 import { router } from '../../router'
 
 const courseCreate = gql`
@@ -24,6 +25,7 @@ export default {
                 description: '',
                 member_limit: 5,
                 subjects: []
+                // user: user.get().id
             }
         }
     },

@@ -8,13 +8,12 @@
     <div class="course-members">
         <h2>Project members</h2>
         <ul>
-            <li>
+            <li v-if="course.created_by">
                 <img class="course-members-avatar" :src="getAvatar(course.created_by)">
                 <p class="course-members-username">
                     {{ course.created_by.name }}
                     <span class="course-monitor">Monitor</span>
                 </p>
-
             </li>
             <li v-for="member in course.members">
                 <img class="course-members-avatar" :src="getAvatar(member)" :alt="member.name">

@@ -34,6 +34,10 @@ export default {
     },
     created () {
         this.join()
+
+        if (this.user) {
+            this.user.avatar = user.avatar()
+        }
     },
     methods: {
         getUser: function () {
