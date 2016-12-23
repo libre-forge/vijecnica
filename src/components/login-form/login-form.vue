@@ -56,6 +56,11 @@ export default {
                     res.data.login.user
                 )
 
+                storage.set(
+                    'token',
+                    res.data.login.token
+                )
+
                 if (_this.$route.query.redirect) {
                     return router.push({
                         path: _this.$route.query.redirect

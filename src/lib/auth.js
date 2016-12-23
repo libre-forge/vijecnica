@@ -2,7 +2,8 @@ import storage from './localStorage'
 import md5 from 'md5'
 
 const user = {
-    isAuthenticated: () => !!storage.get('user', 'token'),
+    isAuthenticated: () => !!storage.get('token'),
+    email: () => !!storage.get('email'),
     token: () => storage.get('user', 'token'),
     username: () => storage.get('user', 'name'),
     avatar: () => {
