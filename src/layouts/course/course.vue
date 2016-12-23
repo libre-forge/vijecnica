@@ -48,9 +48,6 @@ export default {
                         userID: this.user.id
                     }
                 })
-                .then(data => {
-                    console.log(data)
-                })
             }
         }
     }
